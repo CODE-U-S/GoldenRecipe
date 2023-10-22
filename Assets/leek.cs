@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class cabbage : MonoBehaviour
+public class leek : MonoBehaviour
 {
     private Vector3 offset;
     private bool isDragging = false;
