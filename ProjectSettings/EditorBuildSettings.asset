@@ -6,21 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/cooking utensils/Blender.unity
-    guid: db99e2fd941641e47b51e5fcc38b5b66
-  - enabled: 1
-    path: Assets/Scenes/Cook01.unity
-    guid: aa4be3965248015449c71baf6a228720
-  - enabled: 1
     path: Assets/Scenes/Main.unity
     guid: d7e72d433be90c8438c82d166dbf3d07
   - enabled: 1
-    path: Assets/Scenes/cooking utensils/Pan.unity
-    guid: 95619e9ea98b914488b23de880a7d2ff
-  - enabled: 1
-    path: Assets/Scenes/cooking utensils/poot.unity
-    guid: 35e456df18b11424e9304b967dac539f
-  - enabled: 1
-    path: Assets/Scenes/Start.unity
-    guid: 3fc8acdd13e6c734bafef6554d6fdbcd
+    path: Assets/Scenes/Store.unity
+    guid: c5a530673dbf7444d9750be5aa0da087
   m_configObjects: {}
