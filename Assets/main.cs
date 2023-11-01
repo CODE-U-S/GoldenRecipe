@@ -5,28 +5,48 @@ using UnityEngine.SceneManagement;
 
 public class Main : MonoBehaviour
 {
-    public GameObject leftBtn; // LeftBtn을 연결할 변수
-    public GameObject rightBtn; // RightBtn을 연결할 변수
+    public GameObject leftBtn;
+    public GameObject rightBtn;
+
+    private string[] scenes = { "Poot", "Blender", "Pan" };
+    private int currentSceneIndex = -1;
 
     void Start()
     {
-        // LeftBtn과 RightBtn 게임 오브젝트를 찾아 변수에 할당
         leftBtn = GameObject.Find("leftbtn");
         rightBtn = GameObject.Find("rightbtn");
-
-        // LeftBtn과 RightBtn을 다른 씬으로 유지
         DontDestroyOnLoad(leftBtn);
         DontDestroyOnLoad(rightBtn);
     }
 
-    // 메뉴로 화면 전환
     public void RightBtn()
     {
-        SceneManager.LoadScene("poot", LoadSceneMode.Additive);
+        UnloadPreviousScene(); // 이전 씬 언로드
+
+        currentSceneIndex = (currentSceneIndex + 1) % scenes.Length;
+        LoadSceneByIndex(currentSceneIndex); // 새로운 씬 로드
     }
 
     public void LeftBtn()
     {
-        SceneManager.LoadScene("Blender", LoadSceneMode.Additive);
+        UnloadPreviousScene(); // 이전 씬 언로드
+
+        currentSceneIndex = (currentSceneIndex - 1 + scenes.Length) % scenes.Length;
+        LoadSceneByIndex(currentSceneIndex); // 새로운 씬 로드
+    }
+
+    private void LoadSceneByIndex(int index)
+    {
+        string sceneName = scenes[index];
+        SceneManager.LoadScene(sceneName, LoadSceneMode.Additive);
+    }
+
+    private void UnloadPreviousScene()
+    {
+        if (currentSceneIndex != -1)
+        {
+            string previousSceneName = scenes[currentSceneIndex];
+            SceneManager.UnloadSceneAsync(previousSceneName);
+        }
     }
 }
