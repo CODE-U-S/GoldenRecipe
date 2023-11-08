@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Main.unity
     guid: d7e72d433be90c8438c82d166dbf3d07
   - enabled: 1
-    path: Assets/Scenes/Store.unity
+    path: Assets/Scenes/store.unity
     guid: c5a530673dbf7444d9750be5aa0da087
   - enabled: 1
     path: Assets/Scenes/Start.unity
@@ -44,4 +44,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Story/Story7.unity
     guid: 91f827c97dd0cd04d93583f626cd1349
+  - enabled: 1
+    path: Assets/Scenes/cooking utensils/board.unity
+    guid: 24005b46b6815394d924f5e6f501e5c3
   m_configObjects: {}
