@@ -8,9 +8,7 @@ public class Main : MonoBehaviour
     public GameObject leftBtn;
     public GameObject rightBtn;
 
-    private string[] scenes = { "Poot", "Blender", "Pan", "board" }; // "board" 씬 추가
-
-    // 나머지 코드는 이전과 동일
+    private string[] scenes = { "Poot", "Blender", "Pan", "board" }; // Ensure "board" scene is the first one
 
     private int currentSceneIndex = -1;
 
@@ -20,22 +18,26 @@ public class Main : MonoBehaviour
         rightBtn = GameObject.Find("rightbtn");
         DontDestroyOnLoad(leftBtn);
         DontDestroyOnLoad(rightBtn);
+
+        // Find the index of the "board" scene in the array and set it as the starting scene
+        currentSceneIndex = System.Array.IndexOf(scenes, "board");
+        LoadSceneByIndex(currentSceneIndex);
     }
 
     public void RightBtn()
     {
-        UnloadPreviousScene(); // 이전 씬 언로드
+        UnloadPreviousScene(); // Unload the previous scene
 
         currentSceneIndex = (currentSceneIndex + 1) % scenes.Length;
-        LoadSceneByIndex(currentSceneIndex); // 새로운 씬 로드
+        LoadSceneByIndex(currentSceneIndex); // Load the new scene
     }
 
     public void LeftBtn()
     {
-        UnloadPreviousScene(); // 이전 씬 언로드
+        UnloadPreviousScene(); // Unload the previous scene
 
         currentSceneIndex = (currentSceneIndex - 1 + scenes.Length) % scenes.Length;
-        LoadSceneByIndex(currentSceneIndex); // 새로운 씬 로드
+        LoadSceneByIndex(currentSceneIndex); // Load the new scene
     }
 
     private void LoadSceneByIndex(int index)
