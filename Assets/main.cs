@@ -8,7 +8,10 @@ public class Main : MonoBehaviour
     public GameObject leftBtn;
     public GameObject rightBtn;
 
-    private string[] scenes = { "Poot", "Blender", "Pan" };
+    private string[] scenes = { "Poot", "Blender", "Pan", "board" }; // "board" 씬 추가
+
+    // 나머지 코드는 이전과 동일
+
     private int currentSceneIndex = -1;
 
     void Start()
