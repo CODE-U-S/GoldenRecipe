@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 334806193}
   - component: {fileID: 334806192}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Store_Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -204,7 +204,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 334806193}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1225813265}
+        m_TargetAssemblyTypeName: GOTO, Assembly-CSharp
+        m_MethodName: MoveStore
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &334806193
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -474,7 +486,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 828679384}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1225813265}
+        m_TargetAssemblyTypeName: GOTO, Assembly-CSharp
+        m_MethodName: MoveMain
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &828679384
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -593,6 +617,7 @@ GameObject:
   - component: {fileID: 1225813263}
   - component: {fileID: 1225813262}
   - component: {fileID: 1225813261}
+  - component: {fileID: 1225813265}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -688,6 +713,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1225813265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1225813260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9cc299847e2a8a44a07d05088eb5620, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1383297341
 GameObject:
   m_ObjectHideFlags: 0
@@ -701,7 +738,7 @@ GameObject:
   - component: {fileID: 1383297344}
   - component: {fileID: 1383297343}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Shop_Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -769,7 +806,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1383297344}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1225813265}
+        m_TargetAssemblyTypeName: GOTO, Assembly-CSharp
+        m_MethodName: MoveShop
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1383297344
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -997,7 +1046,7 @@ GameObject:
   - component: {fileID: 2069284859}
   - component: {fileID: 2069284858}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Bag_Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

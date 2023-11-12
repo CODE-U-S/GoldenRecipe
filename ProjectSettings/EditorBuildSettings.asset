@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Store.unity
     guid: c5a530673dbf7444d9750be5aa0da087
   - enabled: 1
+    path: Assets/Scenes/Shop.unity
+    guid: 9ca67fbabc4ff7441862ca14a324f1f7
+  - enabled: 1
     path: Assets/Scenes/Start.unity
     guid: 3fc8acdd13e6c734bafef6554d6fdbcd
   - enabled: 1
@@ -24,26 +27,8 @@ EditorBuildSettings:
     path: Assets/Scenes/cooking utensils/Blender.unity
     guid: db99e2fd941641e47b51e5fcc38b5b66
   - enabled: 1
-    path: Assets/Scenes/Story/Story1.unity
-    guid: b424b1a9972d1fc448f066b1d782a229
-  - enabled: 1
-    path: Assets/Scenes/Story/Story2.unity
-    guid: 088bc3fa921a0724984550510dd662af
-  - enabled: 1
-    path: Assets/Scenes/Story/Story3.unity
-    guid: 7d65761be9a17da4a85e85ecdcc573da
-  - enabled: 1
-    path: Assets/Scenes/Story/Story4.unity
-    guid: b6af708df1590c64b8bcbacf32755851
-  - enabled: 1
-    path: Assets/Scenes/Story/Story5.unity
-    guid: 90a2a3592292e9a46b1dacbb424ad9c2
-  - enabled: 1
-    path: Assets/Scenes/Story/Story6.unity
-    guid: 3c4b976114d913a4f9b5304749681ccf
-  - enabled: 1
-    path: Assets/Scenes/Story/Story7.unity
-    guid: 91f827c97dd0cd04d93583f626cd1349
+    path: Assets/Scenes/Home.unity
+    guid: 4699056337ef60348bfce43954f5c043
   - enabled: 1
     path: Assets/Scenes/cooking utensils/board.unity
     guid: 24005b46b6815394d924f5e6f501e5c3
