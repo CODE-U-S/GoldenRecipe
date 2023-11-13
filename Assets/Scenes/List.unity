@@ -205,7 +205,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1805745349}
+      - m_Target: {fileID: 1805745350}
         m_TargetAssemblyTypeName: GOTO, Assembly-CSharp
         m_MethodName: MoveHome
         m_Mode: 1
@@ -2415,7 +2415,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1575742437}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1805745349}
+        m_TargetAssemblyTypeName: List, Assembly-CSharp
+        m_MethodName: MoveLevel2
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1575742437
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2536,7 +2548,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1608579478}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1805745349}
+        m_TargetAssemblyTypeName: List, Assembly-CSharp
+        m_MethodName: MoveLevel1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1608579478
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2656,6 +2680,7 @@ GameObject:
   - component: {fileID: 1805745346}
   - component: {fileID: 1805745345}
   - component: {fileID: 1805745349}
+  - component: {fileID: 1805745350}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2748,6 +2773,18 @@ RectTransform:
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &1805745349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1805745344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81fdf7896bdf6744a821697387b30f3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1805745350
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
