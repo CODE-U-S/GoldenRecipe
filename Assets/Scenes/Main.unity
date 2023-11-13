@@ -527,7 +527,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 687631079}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c262c4bb7ba9314eb387c84c472d21d, type: 3}
+  m_Script: {fileID: 11500000, guid: ec5c6a3eaba47ca498594d80231b1c09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &752826142
@@ -757,7 +757,7 @@ GameObject:
   - component: {fileID: 841575033}
   m_Layer: 5
   m_Name: garlic
-  m_TagString: Ingredient
+  m_TagString: garlic
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -910,7 +910,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 841575028}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bde132f48eaa5a04d8304736d05bacb7, type: 3}
+  m_Script: {fileID: 11500000, guid: ec5c6a3eaba47ca498594d80231b1c09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &880804700
@@ -1089,10 +1089,10 @@ GameObject:
   - component: {fileID: 898532827}
   - component: {fileID: 898532831}
   - component: {fileID: 898532830}
-  - component: {fileID: 898532829}
+  - component: {fileID: 898532832}
   m_Layer: 0
   m_Name: leek
-  m_TagString: Untagged
+  m_TagString: leek
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1164,18 +1164,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 642857301}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &898532829
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 898532826}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f281ec562ad96ec42b6ae33ab12b6695, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!50 &898532830
 Rigidbody2D:
   serializedVersion: 4
@@ -1248,6 +1236,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.91, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &898532832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 898532826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec5c6a3eaba47ca498594d80231b1c09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1349446645
 GameObject:
   m_ObjectHideFlags: 0
@@ -1312,7 +1312,7 @@ GameObject:
   - component: {fileID: 1467706191}
   - component: {fileID: 1467706194}
   - component: {fileID: 1467706193}
-  - component: {fileID: 1467706192}
+  - component: {fileID: 1467706195}
   m_Layer: 0
   m_Name: water
   m_TagString: Untagged
@@ -1387,18 +1387,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1467706192
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1467706189}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c262c4bb7ba9314eb387c84c472d21d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!50 &1467706193
 Rigidbody2D:
   serializedVersion: 4
@@ -1471,6 +1459,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.8, y: 0.8}
   m_EdgeRadius: 0
+--- !u!114 &1467706195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1467706189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec5c6a3eaba47ca498594d80231b1c09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1500030142
 GameObject:
   m_ObjectHideFlags: 0
@@ -1577,8 +1577,8 @@ GameObject:
   - component: {fileID: 1856476100}
   - component: {fileID: 1856476101}
   m_Layer: 0
-  m_Name: cabbage
-  m_TagString: Untagged
+  m_Name: potato
+  m_TagString: potato
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

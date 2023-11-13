@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DragAndDrop : MonoBehaviour
+public class food : MonoBehaviour
 {
     private Vector3 offset;
     private bool isDragging = false;
