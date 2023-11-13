@@ -779,6 +779,7 @@ GameObject:
   - component: {fileID: 998658152}
   - component: {fileID: 998658151}
   - component: {fileID: 998658156}
+  - component: {fileID: 998658157}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -902,6 +903,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moneybar_text: {fileID: 845796264}
+--- !u!114 &998658157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 998658150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8b8dd6389886744ba758e38bc1b5f98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1209484501
 GameObject:
   m_ObjectHideFlags: 0
@@ -1605,7 +1618,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 170, y: 160}
-  m_SizeDelta: {x: 100, y: 80}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2063585539
 MonoBehaviour:
@@ -1651,9 +1664,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 998658151}
-        m_TargetAssemblyTypeName: GoHome, Assembly-CSharp
-        m_MethodName: MoveMain
+      - m_Target: {fileID: 998658157}
+        m_TargetAssemblyTypeName: GOTO, Assembly-CSharp
+        m_MethodName: MoveHome
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
