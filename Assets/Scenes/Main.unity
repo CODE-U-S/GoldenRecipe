@@ -1817,8 +1817,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1981829244}
-        m_TargetAssemblyTypeName: GotoStore, Assembly-CSharp
-        m_MethodName: MoveStore
+        m_TargetAssemblyTypeName: GOTO, Assembly-CSharp
+        m_MethodName: MoveHome
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1848,7 +1848,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b3793209c4a7fb949a8dbefca87ce87b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 222a9946b8b680648aa51a094ef0f30f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1981,7 +1981,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1981829239}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 849ea52f592bfaf428a97e10b4dcac72, type: 3}
+  m_Script: {fileID: 11500000, guid: c8b8dd6389886744ba758e38bc1b5f98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
