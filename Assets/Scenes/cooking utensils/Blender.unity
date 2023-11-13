@@ -226,8 +226,8 @@ GameObject:
   - component: {fileID: 1887838657}
   - component: {fileID: 1887838656}
   m_Layer: 0
-  m_Name: Blender
-  m_TagString: Untagged
+  m_Name: blender
+  m_TagString: cooking
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

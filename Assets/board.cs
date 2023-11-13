@@ -11,10 +11,12 @@ public class board : MonoBehaviour
     public Sprite board_leek;
 
     private Dictionary<string, Sprite> tagToSprite;
+    private AudioSource CollisionSound;
 
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        CollisionSound = GetComponent<AudioSource>();
 
         // 딕셔너리 초기화
         tagToSprite = new Dictionary<string, Sprite>
@@ -35,6 +37,8 @@ public class board : MonoBehaviour
         if (tagToSprite.ContainsKey(collidedTag))
         {
             Sprite newSprite = tagToSprite[collidedTag];
+
+            CollisionSound.Play();
 
             // 이미지 변경
             spriteRenderer.sprite = newSprite;
