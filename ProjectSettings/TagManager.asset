@@ -10,6 +10,7 @@ TagManager:
   - potato
   - garlic
   - leek
+  - cooking
   layers:
   - Default
   - TransparentFX
