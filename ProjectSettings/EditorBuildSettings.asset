@@ -29,4 +29,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Start01.unity
     guid: 54a3d53583b2ac54f9ad174ce3ca38eb
+  - enabled: 1
+    path: Assets/Scenes/Bag.unity
+    guid: 14be0747c348d064b91298398daca12c
+  - enabled: 1
+    path: Assets/Scenes/Myshop.unity
+    guid: 5191299da0cb7904999f97a42e12928f
   m_configObjects: {}
