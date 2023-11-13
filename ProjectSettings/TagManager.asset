@@ -11,6 +11,7 @@ TagManager:
   - garlic
   - leek
   - cooking
+  - water
   layers:
   - Default
   - TransparentFX
