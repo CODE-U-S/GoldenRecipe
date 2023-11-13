@@ -2,13 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class board : MonoBehaviour
+public class pot : MonoBehaviour
 {
     private SpriteRenderer spriteRenderer;
-    public Sprite board_carrot;
-    public Sprite board_garlic;
-    public Sprite board_potato;
-    public Sprite board_leek;
+    public Sprite pot_carrotpotato;
+    public Sprite pot_curry;
+    public Sprite pot_leekwater;
+    public Sprite pot_potatoleekcarrot;
+    public Sprite pot_water;
+    public Sprite pot_watercarrot;
+    public Sprite pot_waterpotato;
 
     private Dictionary<string, Sprite> tagToSprite;
     private AudioSource CollisionSound;
@@ -21,10 +24,10 @@ public class board : MonoBehaviour
         // 딕셔너리 초기화
         tagToSprite = new Dictionary<string, Sprite>
         {
-            { "carrot", board_carrot },
-            { "garlic", board_garlic },
-            { "potato", board_potato },
-            { "leek", board_leek }
+            { "water", pot_water },
+            { "carrot", pot_watercarrot },
+            { "leek", pot_leekwater },
+            { "potato", pot_waterpotato }
         };
     }
 

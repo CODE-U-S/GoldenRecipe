@@ -18,7 +18,7 @@ EditorBuildSettings:
     path: Assets/Scenes/cooking utensils/Pan.unity
     guid: 95619e9ea98b914488b23de880a7d2ff
   - enabled: 1
-    path: Assets/Scenes/cooking utensils/Blender.unity
+    path: Assets/Scenes/cooking utensils/blender.unity
     guid: db99e2fd941641e47b51e5fcc38b5b66
   - enabled: 1
     path: Assets/Scenes/cooking utensils/board.unity

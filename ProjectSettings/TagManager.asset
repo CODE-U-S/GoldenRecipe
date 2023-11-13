@@ -4,8 +4,15 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Ingredient
+  - DialogueText
   - carrot
+  - Ingredient
+  - potato
+  - garlic
+  - leek
+  - cooking
+  - water
+  - shrimp
   layers:
   - Default
   - TransparentFX
