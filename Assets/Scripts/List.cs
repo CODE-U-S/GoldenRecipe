@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 public class List : MonoBehaviour
 {
+    
     public void MoveLevel1()
     {
         SceneManager.LoadScene("Level 1");
@@ -15,9 +17,8 @@ public class List : MonoBehaviour
         SceneManager.LoadScene("Level 2");
     }
 
-    public void MoveClose()
+    public void LoadClose()
     {
-        SceneManager.LoadScene("close");
-        Debug.Log("¾Ë¸²Ã¢ ¶ä.");
+        SceneManager.LoadScene("close", LoadSceneMode.Additive);
     }
 }
