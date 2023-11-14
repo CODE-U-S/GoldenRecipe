@@ -228,6 +228,7 @@ GameObject:
   - component: {fileID: 1933515280}
   - component: {fileID: 1933515281}
   - component: {fileID: 1933515282}
+  - component: {fileID: 1933515283}
   m_Layer: 0
   m_Name: board
   m_TagString: cooking
@@ -391,6 +392,18 @@ MonoBehaviour:
   board_potato: {fileID: 21300000, guid: 0e9cdcd6bd901164c9b4435cd4c114f4, type: 3}
   board_leek: {fileID: 21300000, guid: be3cfd2459682c949948ba944ec2be5b, type: 3}
   collisionSound: {fileID: 8300000, guid: e866ac8209a3dfd4f94ec4a0b99d23e0, type: 3}
+--- !u!114 &1933515283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1933515277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd21b6215a9d8db4eb078e3071444e98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
