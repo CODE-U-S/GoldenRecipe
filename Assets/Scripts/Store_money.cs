@@ -1,38 +1,69 @@
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
 
 public class Store_money : MonoBehaviour
 {
-    
-    public TextMeshProUGUI moneybar_text; // UI¿¡¼­ µ·À» Ç¥½ÃÇÒ Text ÄÄÆ÷³ÍÆ®¸¦ ¿¬°áÇØÁİ´Ï´Ù.
-    static int money = 100; // ÃÊ±â µ· °ª
+    public TextMeshProUGUI moneyBarText; // TextMeshProUGUIë¡œ ë³€ê²½
+    private int money = 100;
 
-
-    public void Subtract5()
+    void Start()
     {
-        Debug.Log("money 5");
-        money -= 5;
-        update(money);
+        UpdateMoneyBar();
     }
 
-    public void Subtract10()
+    void UpdateMoneyBar()
     {
-        Debug.Log("money 10");
-        money -= 10;
-        update(money);
+        moneyBarText.text = "Money: " + money;
     }
 
-    public void Subtract15()
+    // ì•„ì´í…œì„ êµ¬ë§¤í•˜ëŠ” í•¨ìˆ˜
+    void BuyItem(int cost)
     {
-        Debug.Log("money 15");
-        money -= 15;
-        update(money);
+        if (money >= cost)
+        {
+            money -= cost;
+            UpdateMoneyBar();
+        }
+        else
+        {
+            Debug.Log("Not enough money to buy this item!");
+        }
     }
-    public void update(int money)
+
+    // ë¬¼ì„ êµ¬ë§¤í•˜ëŠ” í•¨ìˆ˜
+    public void BuyWater()
     {
-        Debug.Log("ÃÑ ¸Ó´Ï");
-        moneybar_text.text = money + " "; // UI ¾÷µ¥ÀÌÆ®
+        BuyItem(5);
     }
+
+    // ë§ˆëŠ˜ì„ êµ¬ë§¤í•˜ëŠ” í•¨ìˆ˜
+    public void BuyGarlic()
+    {
+        BuyItem(5);
+    }
+
+    // ê°ìë¥¼ êµ¬ë§¤í•˜ëŠ” í•¨ìˆ˜
+    public void BuyPotato()
+    {
+        BuyItem(10);
+    }
+
+    // ë‹¹ê·¼ì„ êµ¬ë§¤í•˜ëŠ” í•¨ìˆ˜
+    public void BuyCarrot()
+    {
+        BuyItem(10);
+    }
+
+    // ë°¥ë¥¼ êµ¬ë§¤í•˜ëŠ” í•¨ìˆ˜
+    public void BuyRice()
+    {
+        BuyItem(10);
+    }
+
+    // ì¹´ë ˆ ê°€ë£¨ë¥¼ êµ¬ë§¤í•˜ëŠ” í•¨ìˆ˜
+    public void BuyCurryPowder()
+    {
+        BuyItem(15);
+    }
+
 }
