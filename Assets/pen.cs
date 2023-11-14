@@ -11,12 +11,12 @@ public class pen : MonoBehaviour
     public Sprite pen_shrimpfriedrice;
 
     private Dictionary<string, Sprite> tagToSprite;
-    private AudioSource CollisionSound;
+    public AudioClip collisionSound; // 직접 추가한 오디오 클립
 
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        CollisionSound = GetComponent<AudioSource>();
+        
 
         // 딕셔너리 초기화
         tagToSprite = new Dictionary<string, Sprite>
@@ -37,10 +37,18 @@ public class pen : MonoBehaviour
         {
             Sprite newSprite = tagToSprite[collidedTag];
 
-            CollisionSound.Play();
-
             // 이미지 변경
             spriteRenderer.sprite = newSprite;
+
+            // 직접 추가한 오디오 클립을 재생
+            if (collisionSound != null)
+            {
+                AudioSource.PlayClipAtPoint(collisionSound, transform.position);
+            }
+            else
+            {
+                Debug.LogWarning("pen 사운드 없음");
+            }
         }
     }
 }
