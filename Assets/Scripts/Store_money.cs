@@ -3,12 +3,26 @@ using TMPro;
 
 public class Store_money : MonoBehaviour
 {
-    public TextMeshProUGUI moneyBarText; // TextMeshProUGUI로 변경
+    public TextMeshProUGUI moneyBarText;
+    public TextMeshProUGUI waterText;
+    public TextMeshProUGUI garlicText;
+    public TextMeshProUGUI potatoText;
+    public TextMeshProUGUI riceText;
+    public TextMeshProUGUI carrotText;
+    public TextMeshProUGUI curryPowderText;
+
     private int money = 100;
+    private int waterCount = 0;
+    private int garlicCount = 0;
+    private int potatoCount = 0;
+    private int riceCount = 0;
+    private int carrotCount = 0;
+    private int curryPowderCount = 0;
 
     void Start()
     {
         UpdateMoneyBar();
+        UpdateItemCount();
     }
 
     void UpdateMoneyBar()
@@ -16,7 +30,16 @@ public class Store_money : MonoBehaviour
         moneyBarText.text = "Money: " + money;
     }
 
-    // 아이템을 구매하는 함수
+    void UpdateItemCount()
+    {
+        waterText.text = "Water: " + waterCount;
+        garlicText.text = "Garlic: " + garlicCount;
+        potatoText.text = "Potato: " + potatoCount;
+        riceText.text = "Rice: " + riceCount;
+        carrotText.text = "Carrot: " + carrotCount;
+        curryPowderText.text = "Curry Powder: " + curryPowderCount;
+    }
+
     void BuyItem(int cost)
     {
         if (money >= cost)
@@ -30,40 +53,45 @@ public class Store_money : MonoBehaviour
         }
     }
 
-    // 물을 구매하는 함수
     public void BuyWater()
     {
         BuyItem(5);
+        waterCount++;
+        UpdateItemCount();
     }
 
-    // 마늘을 구매하는 함수
     public void BuyGarlic()
     {
         BuyItem(5);
+        garlicCount++;
+        UpdateItemCount();
     }
 
-    // 감자를 구매하는 함수
     public void BuyPotato()
     {
         BuyItem(10);
+        potatoCount++;
+        UpdateItemCount();
     }
 
-    // 당근을 구매하는 함수
     public void BuyCarrot()
     {
         BuyItem(10);
+        carrotCount++;
+        UpdateItemCount();
     }
 
-    // 밥를 구매하는 함수
     public void BuyRice()
     {
         BuyItem(10);
+        riceCount++;
+        UpdateItemCount();
     }
-
-    // 카레 가루를 구매하는 함수
+    
     public void BuyCurryPowder()
     {
         BuyItem(15);
+        curryPowderCount++;
+        UpdateItemCount();
     }
-
 }
