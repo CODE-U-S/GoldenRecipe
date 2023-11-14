@@ -1301,6 +1301,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leftBtn: {fileID: 413095954}
   rightBtn: {fileID: 880804700}
+  buttonClickSound: {fileID: 8300000, guid: 921afa404b3fe4743b3136cc67a96101, type: 3}
 --- !u!1 &1467706189
 GameObject:
   m_ObjectHideFlags: 0
