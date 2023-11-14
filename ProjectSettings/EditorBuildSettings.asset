@@ -48,6 +48,9 @@ EditorBuildSettings:
     path: Assets/Scenes/List/close.unity
     guid: 6686763ab2c174149994da1bab86ec1c
   - enabled: 1
+    path: Assets/Scenes/Bed.unity
+    guid: 552bd022736d95342b044dc446c34b19
+  - enabled: 1
     path: Assets/Scenes/Shop.unity
     guid: 5191299da0cb7904999f97a42e12928f
   m_configObjects: {}
