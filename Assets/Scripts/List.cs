@@ -14,4 +14,10 @@ public class List : MonoBehaviour
     {
         SceneManager.LoadScene("Level 2");
     }
+
+    public void MoveClose()
+    {
+        SceneManager.LoadScene("close");
+        Debug.Log("¾Ë¸²Ã¢ ¶ä.");
+    }
 }
