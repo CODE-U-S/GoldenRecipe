@@ -48,6 +48,18 @@ EditorBuildSettings:
     path: Assets/Scenes/List/close.unity
     guid: 6686763ab2c174149994da1bab86ec1c
   - enabled: 1
+    path: Assets/Scenes/Setting.unity
+    guid: cec26d986b611e1409f5c7e5dd913bbd
+  - enabled: 1
+    path: Assets/Scenes/Settings/reset.unity
+    guid: 642e14d96c011a9468ab22e6c66dc42a
+  - enabled: 1
+    path: Assets/Scenes/Settings/save.unity
+    guid: 85bd07ebec0ae204e9f4907f8963def5
+  - enabled: 1
+    path: Assets/Scenes/Settings/tiket.unity
+    guid: d5d6d9621bdae024798e1e9aa2b78a45
+  - enabled: 1
     path: Assets/Scenes/Bed.unity
     guid: 552bd022736d95342b044dc446c34b19
   - enabled: 1
