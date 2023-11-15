@@ -36,6 +36,9 @@ public class GOTO : MonoBehaviour
     public void MoveList()
     {
         SceneManager.LoadScene("List");
-        Debug.Log("List·Î ÀüÈ¯");
+    }
+    public void MoveSetting()
+    {
+        SceneManager.LoadScene("Setting");
     }
 }

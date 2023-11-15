@@ -518,6 +518,7 @@ GameObject:
   - component: {fileID: 540400850}
   - component: {fileID: 540400849}
   - component: {fileID: 540400848}
+  - component: {fileID: 540400852}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -619,6 +620,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &540400852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 540400847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6775036f1cdc4142b3be895cc453aa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &602687653
 GameObject:
   m_ObjectHideFlags: 0
@@ -775,7 +788,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 758472269}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 540400852}
+        m_TargetAssemblyTypeName: Setting, Assembly-CSharp
+        m_MethodName: LoadSave
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &758472269
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1296,7 +1321,7 @@ GameObject:
   - component: {fileID: 1392375380}
   - component: {fileID: 1392375379}
   m_Layer: 5
-  m_Name: inital
+  m_Name: reset
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1364,7 +1389,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1392375380}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 540400852}
+        m_TargetAssemblyTypeName: Setting, Assembly-CSharp
+        m_MethodName: LoadReset
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1392375380
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1618,7 +1655,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1467356967}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 540400852}
+        m_TargetAssemblyTypeName: Setting, Assembly-CSharp
+        m_MethodName: DiscordURL
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1467356967
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1691,8 +1740,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0.0000076293945, y: -0.0000076293945}
-  m_SizeDelta: {x: 76.2252, y: 21.6349}
+  m_AnchoredPosition: {x: 7, y: 0}
+  m_SizeDelta: {x: 76, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1495042649
 MonoBehaviour:
@@ -1766,8 +1815,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0.0000076293945, y: -0.0000076293945}
-  m_SizeDelta: {x: 76.2252, y: 21.6349}
+  m_AnchoredPosition: {x: 7, y: 0}
+  m_SizeDelta: {x: 76, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1616861757
 MonoBehaviour:
@@ -1924,7 +1973,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1759916461}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 540400852}
+        m_TargetAssemblyTypeName: Setting, Assembly-CSharp
+        m_MethodName: LoadTiket
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1759916461
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2044,7 +2105,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1818911850}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 540400852}
+        m_TargetAssemblyTypeName: Setting, Assembly-CSharp
+        m_MethodName: GithubURL
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1818911850
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2239,7 +2312,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2013399627}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 540400852}
+        m_TargetAssemblyTypeName: Setting, Assembly-CSharp
+        m_MethodName: DiscordURL
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2013399627
 MonoBehaviour:
   m_ObjectHideFlags: 0
