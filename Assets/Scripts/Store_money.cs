@@ -11,6 +11,9 @@ public class Store_money : MonoBehaviour
     public TextMeshProUGUI carrotText;
     public TextMeshProUGUI curryPowderText;
 
+    public AudioClip coinSound;  // 추가: 코인 효과음 파일
+
+
     private int money = 100;
     private int waterCount = 0;
     private int garlicCount = 0;
@@ -52,12 +55,22 @@ public class Store_money : MonoBehaviour
             Debug.Log("Not enough money to buy this item!");
         }
     }
+    private void PlayButtonClickSound(AudioClip sound)
+    {
+        if (sound != null)
+        {
+            AudioSource.PlayClipAtPoint(sound, Camera.main.transform.position);
+            // 주의: 이 방법은 2D 사운드 효과를 제공하며, AudioListener 위치에서 사운드를 재생합니다.
+            // 다른 사운드 효과가 필요하면 적절한 AudioSource를 만들어 사용하세요.
+        }
+    }
 
     public void BuyWater()
     {
         BuyItem(5);
         waterCount++;
         UpdateItemCount();
+        PlayButtonClickSound(coinSound);
     }
 
     public void BuyGarlic()
@@ -65,6 +78,7 @@ public class Store_money : MonoBehaviour
         BuyItem(5);
         garlicCount++;
         UpdateItemCount();
+        PlayButtonClickSound(coinSound);
     }
 
     public void BuyPotato()
@@ -72,6 +86,7 @@ public class Store_money : MonoBehaviour
         BuyItem(10);
         potatoCount++;
         UpdateItemCount();
+        PlayButtonClickSound(coinSound);
     }
 
     public void BuyCarrot()
@@ -79,6 +94,7 @@ public class Store_money : MonoBehaviour
         BuyItem(10);
         carrotCount++;
         UpdateItemCount();
+        PlayButtonClickSound(coinSound);
     }
 
     public void BuyRice()
@@ -86,6 +102,7 @@ public class Store_money : MonoBehaviour
         BuyItem(10);
         riceCount++;
         UpdateItemCount();
+        PlayButtonClickSound(coinSound);
     }
     
     public void BuyCurryPowder()
@@ -93,5 +110,6 @@ public class Store_money : MonoBehaviour
         BuyItem(15);
         curryPowderCount++;
         UpdateItemCount();
+        PlayButtonClickSound(coinSound);
     }
 }
