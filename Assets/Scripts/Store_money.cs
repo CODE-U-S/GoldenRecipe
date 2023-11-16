@@ -21,7 +21,11 @@ public class Store_money : MonoBehaviour
     private int riceCount = 0;
     private int carrotCount = 0;
     private int curryPowderCount = 0;
-
+    private void Awake()
+    {
+        // 게임 시작 시에 데이터 불러오기
+        LoadGameData();
+    }
     void Start()
     {
         UpdateMoneyBar();
@@ -43,18 +47,38 @@ public class Store_money : MonoBehaviour
         curryPowderText.text = "Curry Powder: " + curryPowderCount;
     }
 
+    void SaveGameData()
+    {
+        // PlayerPrefs를 사용하여 데이터 저장
+        PlayerPrefs.SetInt("Money", money);
+        PlayerPrefs.SetInt("WaterCount", waterCount);
+        PlayerPrefs.SetInt("GarlicCount", garlicCount);
+        PlayerPrefs.SetInt("PotatoCount", potatoCount);
+        PlayerPrefs.SetInt("RiceCount", riceCount);
+        PlayerPrefs.SetInt("CarrotCount", carrotCount);
+        PlayerPrefs.SetInt("CurryPowderCount", curryPowderCount);
+        PlayerPrefs.Save();
+    }
+    void LoadGameData()
+    {
+        // PlayerPrefs를 사용하여 데이터 불러오기
+        money = PlayerPrefs.GetInt("Money", 100);
+        waterCount = PlayerPrefs.GetInt("WaterCount", 0);
+        garlicCount = PlayerPrefs.GetInt("GarlicCount", 0);
+        potatoCount = PlayerPrefs.GetInt("PotatoCount", 0);
+        riceCount = PlayerPrefs.GetInt("RiceCount", 0);
+        carrotCount = PlayerPrefs.GetInt("CarrotCount", 0);
+        curryPowderCount = PlayerPrefs.GetInt("CurryPowderCount", 0);
+    }
     void BuyItem(int cost)
     {
-        if (money >= cost)
-        {
-            money -= cost;
-            UpdateMoneyBar();
-        }
-        else
-        {
-            Debug.Log("Not enough money to buy this item!");
-        }
+        money -= cost;
+        UpdateMoneyBar();
+        UpdateItemCount();
+        SaveGameData(); // 데이터 저장
+      
     }
+
     private void PlayButtonClickSound(AudioClip sound)
     {
         if (sound != null)
@@ -66,50 +90,82 @@ public class Store_money : MonoBehaviour
     }
 
     public void BuyWater()
-    {
-        BuyItem(5);
-        waterCount++;
-        UpdateItemCount();
-        PlayButtonClickSound(coinSound);
+    {   
+        if(money>=5){
+            BuyItem(5);
+            waterCount++;
+            UpdateItemCount();
+            PlayButtonClickSound(coinSound);
+        
+        }
     }
 
     public void BuyGarlic()
     {
-        BuyItem(5);
-        garlicCount++;
-        UpdateItemCount();
-        PlayButtonClickSound(coinSound);
+        if(money>=5){
+            BuyItem(5);
+            garlicCount++;
+            UpdateItemCount();
+            PlayButtonClickSound(coinSound);
+        }
+        
     }
 
     public void BuyPotato()
-    {
-        BuyItem(10);
-        potatoCount++;
-        UpdateItemCount();
-        PlayButtonClickSound(coinSound);
+    {   
+        if(money>=10){
+            BuyItem(10);
+            potatoCount++;
+            UpdateItemCount();
+            PlayButtonClickSound(coinSound);    
+        }   
     }
 
     public void BuyCarrot()
-    {
-        BuyItem(10);
-        carrotCount++;
-        UpdateItemCount();
-        PlayButtonClickSound(coinSound);
+    {   
+        if(money>=10){
+            BuyItem(10);
+            carrotCount++;
+            UpdateItemCount();
+            PlayButtonClickSound(coinSound);
+        }
     }
 
     public void BuyRice()
-    {
-        BuyItem(10);
-        riceCount++;
-        UpdateItemCount();
-        PlayButtonClickSound(coinSound);
+    {   
+        if(money>=10){
+            BuyItem(10);
+            riceCount++;
+            UpdateItemCount();
+            PlayButtonClickSound(coinSound);
+        }
     }
     
     public void BuyCurryPowder()
     {
-        BuyItem(15);
-        curryPowderCount++;
+        if(money>=15){
+            BuyItem(15);
+            curryPowderCount++;
+            UpdateItemCount();
+            PlayButtonClickSound(coinSound);
+        }
+    }
+
+    public void ResetGameData()
+    {
+        // PlayerPrefs로 저장된 모든 데이터 초기화
+        PlayerPrefs.DeleteAll();
+        // 초기값으로 데이터 설정
+        money = 100;
+        waterCount = 0;
+        garlicCount = 0;
+        potatoCount = 0;
+        riceCount = 0;
+        carrotCount = 0;
+        curryPowderCount = 0;
+
+        // 초기화된 데이터로 UI 업데이트
+        UpdateMoneyBar();
         UpdateItemCount();
-        PlayButtonClickSound(coinSound);
     }
 }
