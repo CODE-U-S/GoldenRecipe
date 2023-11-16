@@ -2,20 +2,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class Shop : MonoBehaviour
 {
     public float day_time = 6.00f;
     public TextMeshProUGUI OpenandClose;
-    // Start is called before the first frame update
-    void Start()
+
+    private void ShopButton()
     {
-        if(day_time >= 8 && day_time < 17)
+        if (day_time >= 8 && day_time < 17)
         {
             Open();
-            
-        } else
+
+        }
+        else
         {
             Close();
         }

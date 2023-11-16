@@ -1,48 +1,46 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
 
 public class Bed : MonoBehaviour
 {
-    float sec;
-    int min_;
-    int day = 1;
+    int day = 30;
 
     [SerializeField]
-    TextMeshProUGUI _TimerText;
-    [SerializeField]
     TextMeshProUGUI _DaysText;
-    // Start is called before the first frame update
+
+    void Start()
+    {
+        LoadSavedData(); // 저장된 데이터 불러오기
+        UpdateDaysText(); // 텍스트 업데이트
+    }
+
     public void LoadBed()
     {
         SceneManager.LoadScene("Bed", LoadSceneMode.Additive);
     }
-    public void Update()
-    {
-        Timer();
-    }
-    public void Timer()
-    {
-        sec += Time.deltaTime;
-        _TimerText.text = string.Format("{0:D2}:{1:D2}", min_, (int)sec);
 
-        if((int)sec > 59)
-        {
-            sec = 0;
-            min_++;
-            if(min_ == 24)
-            {
-                min_ = 0;
-                day++;
-                if(day == 30)
-                {
-                    SceneManager.LoadScene("Ending1");
-                }
-            }
-        }
-        _DaysText.text = string.Format("{0:D1}번째날", day);
+    public void BedYes()
+    {
+        day -= 1;
+        PlayerPrefs.SetInt("SavedDay", day);
+        Debug.Log("프린트 완");
+        SaveData(); // 데이터 저장
+        SceneManager.LoadScene("Home");
+    }
+
+    private void LoadSavedData()
+    {
+        day = PlayerPrefs.GetInt("SavedDay", 30); // 저장된 데이터 불러오기, 기본 값은 30
+    }
+
+    private void SaveData()
+    {
+        PlayerPrefs.Save(); // 변경된 PlayerPrefs를 저장합니다.
+    }
+
+    private void UpdateDaysText()
+    {
+        _DaysText.text = string.Format("D-{0:D1}", day);
     }
 }
