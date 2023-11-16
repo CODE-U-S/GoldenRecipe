@@ -22,6 +22,6 @@ public class start02 : MonoBehaviour
     void LoadMainScene()
     {
         // SceneManager를 사용하여 main 씬으로 전환합니다.
-        SceneManager.LoadScene("main");
+        SceneManager.LoadScene("Home");
     }
 }
