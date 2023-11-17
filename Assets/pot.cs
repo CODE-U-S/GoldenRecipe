@@ -30,7 +30,8 @@ public class pot : MonoBehaviour
             { "water", pot_water },
             { "carrot", pot_watercarrot },
             { "leek", pot_leekwater },
-            { "potato", pot_waterpotato }
+            { "potato", pot_waterpotato },
+            { "curry", pot_curry }
         };
     }
 
@@ -45,7 +46,26 @@ public class pot : MonoBehaviour
             Sprite newSprite = tagToSprite[collidedTag];
 
             // 이미지 변경
-            image.sprite = newSprite;
+             if (collidedTag == "curry" && image.sprite == pot_potatoleekcarrot)
+            {
+                image.sprite = pot_curry;
+            }
+            else if(collidedTag == "leek" && image.sprite == pot_carrotpotato){
+
+                image.sprite = pot_potatoleekcarrot;
+            }
+            else if(collidedTag == "carrot" && image.sprite == pot_waterpotato){
+
+                image.sprite = pot_carrotpotato;
+            }
+            else if(collidedTag == "potato" && image.sprite == pot_watercarrot){
+
+                image.sprite = pot_carrotpotato;
+            }
+            else
+            {
+                image.sprite = newSprite;
+            }
 
             // 직접 추가한 오디오 클립을 재생
             if (collisionSound != null)
