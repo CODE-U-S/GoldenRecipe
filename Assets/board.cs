@@ -3,55 +3,53 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class board : MonoBehaviour
+public class Board : MonoBehaviour
 {
-    private SpriteRenderer spriteRenderer;
-    private Sprite defaultSprite; // 기본 이미지를 저장할 변수 추가
-    public Sprite board_carrot;
-    public Sprite board_garlic;
-    public Sprite board_potato;
-    public Sprite board_leek;
+    private Image image;
+    public Sprite boardCarrot;
+    public Sprite boardGarlic;
+    public Sprite boardPotato;
+    public Sprite boardLeek;
 
     private Dictionary<string, Sprite> tagToSprite;
-    public AudioClip collisionSound;
+    public AudioClip collisionSound; // 직접 추가한 오디오 클립
 
     void Start()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        defaultSprite = spriteRenderer.sprite; // 기본 이미지 설정
+        image = GetComponent<Image>();
 
+        // 딕셔너리 초기화
         tagToSprite = new Dictionary<string, Sprite>
         {
-            { "carrot", board_carrot },
-            { "garlic", board_garlic },
-            { "potato", board_potato },
-            { "leek", board_leek }
+            { "carrot", boardCarrot },
+            { "garlic", boardGarlic },
+            { "potato", boardPotato },
+            { "leek", boardLeek }
         };
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        // 충돌한 오브젝트의 태그를 가져오기
         string collidedTag = collision.tag;
 
+        // 딕셔너리에서 태그에 해당하는 이미지 가져오기
         if (tagToSprite.ContainsKey(collidedTag))
         {
             Sprite newSprite = tagToSprite[collidedTag];
-            spriteRenderer.sprite = newSprite;
 
+            // 이미지 변경
+            image.sprite = newSprite;
+
+            // 직접 추가한 오디오 클립을 재생
             if (collisionSound != null)
             {
                 AudioSource.PlayClipAtPoint(collisionSound, transform.position);
             }
             else
             {
-                Debug.LogWarning("board 사운드 없음");
+                Debug.LogWarning("Board 사운드 없음");
             }
         }
-    }
-
-    // 새로운 함수 추가: 기본 이미지로 되돌리기
-    public void ResetToDefaultSprite()
-    {
-        spriteRenderer.sprite = defaultSprite;
     }
 }
