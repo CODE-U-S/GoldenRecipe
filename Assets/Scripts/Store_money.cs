@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class Store_money : MonoBehaviour
@@ -13,6 +14,14 @@ public class Store_money : MonoBehaviour
 
     public AudioClip coinSound;  // 추가: 코인 효과음 파일
 
+    public GameObject waterPrefab;
+    public GameObject garlicPrefab;
+    public GameObject potatoPrefab;
+    public GameObject ricePrefab;
+    public GameObject carrotPrefab;
+    public GameObject curryPowderPrefab;
+
+    public GameObject content; // content 변수 선언
 
     private int money = 100;
     private int waterCount = 0;
@@ -70,14 +79,18 @@ public class Store_money : MonoBehaviour
         carrotCount = PlayerPrefs.GetInt("CarrotCount", 0);
         curryPowderCount = PlayerPrefs.GetInt("CurryPowderCount", 0);
     }
-    void BuyItem(int cost)
+    void BuyItem(int cost, GameObject prefab)
     {
         money -= cost;
         UpdateMoneyBar();
         UpdateItemCount();
         SaveGameData(); // 데이터 저장
-      
+
+        // 프리팹을 인스턴스화하고 content(컨테이너)에 추가합니다.
+        GameObject newItem = Instantiate(prefab, content.transform);
+        // 여기에서 인스턴스화된 객체의 위치 또는 다른 속성을 조절할 수 있습니다.
     }
+
 
     private void PlayButtonClickSound(AudioClip sound)
     {
@@ -92,7 +105,7 @@ public class Store_money : MonoBehaviour
     public void BuyWater()
     {   
         if(money>=5){
-            BuyItem(5);
+            BuyItem(5, waterPrefab);
             waterCount++;
             UpdateItemCount();
             PlayButtonClickSound(coinSound);
@@ -103,7 +116,7 @@ public class Store_money : MonoBehaviour
     public void BuyGarlic()
     {
         if(money>=5){
-            BuyItem(5);
+            BuyItem(5, garlicPrefab);
             garlicCount++;
             UpdateItemCount();
             PlayButtonClickSound(coinSound);
@@ -114,7 +127,7 @@ public class Store_money : MonoBehaviour
     public void BuyPotato()
     {   
         if(money>=10){
-            BuyItem(10);
+            BuyItem(10, potatoPrefab);
             potatoCount++;
             UpdateItemCount();
             PlayButtonClickSound(coinSound);    
@@ -124,7 +137,7 @@ public class Store_money : MonoBehaviour
     public void BuyCarrot()
     {   
         if(money>=10){
-            BuyItem(10);
+            BuyItem(10, carrotPrefab);
             carrotCount++;
             UpdateItemCount();
             PlayButtonClickSound(coinSound);
@@ -134,7 +147,7 @@ public class Store_money : MonoBehaviour
     public void BuyRice()
     {   
         if(money>=10){
-            BuyItem(10);
+            BuyItem(10, ricePrefab);
             riceCount++;
             UpdateItemCount();
             PlayButtonClickSound(coinSound);
@@ -144,7 +157,7 @@ public class Store_money : MonoBehaviour
     public void BuyCurryPowder()
     {
         if(money>=15){
-            BuyItem(15);
+            BuyItem(15, curryPowderPrefab);
             curryPowderCount++;
             UpdateItemCount();
             PlayButtonClickSound(coinSound);
