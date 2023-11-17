@@ -11,6 +11,7 @@ namespace check.Check
     {
         private void Start()
         {
+            OpenandClose.text = "Close";
             check_ = PlayerPrefs.GetInt("SavedCheck"); // 저장된 데이터 불러오기
             checks();
         }
@@ -48,10 +49,7 @@ namespace check.Check
             PlayerPrefs.Save(); // 변경된 PlayerPrefs를 저장합니다.
         }
     }
-//1. 이미지 오브젝트 배열에 넣기 [클리어]
-//2. goods마다 랜덤돌리기(중복 상관x) [클리어]
-//3. 띄우기    [클리어]
-//4. 한번 누르면 이미지 사라지기
-//5. 다 판매하면 창 띄우기(모두 판매 -> open에서 close로 바꾸라하세요")
+    //4. 한번 누르면 이미지 사라지기
+    //5. 다 판매하면 창 띄우기(모두 판매 -> open에서 close로 바꾸라하세요")
 
 }
