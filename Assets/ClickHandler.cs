@@ -1,14 +1,15 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ClickHandler : MonoBehaviour
 {
-    private SpriteRenderer spriteRenderer;
+    private Image image;
     private Sprite originalSprite;
 
     void Start()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        originalSprite = spriteRenderer.sprite;
+        image = GetComponent<Image>();
+        originalSprite = image.sprite;
     }
 
     void Update()
@@ -23,7 +24,7 @@ public class ClickHandler : MonoBehaviour
             // 충돌한 객체가 현재 객체인지 확인하고 Sprite를 초기 이미지로 변경
             if (hit.collider != null && hit.collider.gameObject == gameObject)
             {
-                spriteRenderer.sprite = originalSprite;
+                image.sprite = originalSprite;
             }
         }
     }

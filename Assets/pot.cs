@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI; // Image를 사용하기 위해 추가
 
 public class pot : MonoBehaviour
 {
-    private SpriteRenderer spriteRenderer;
+    private Image image; // SpriteRenderer 대신 Image로 변경
+    private AudioSource audioSource; // AudioSource 추가
+
     public Sprite pot_carrotpotato;
     public Sprite pot_curry;
     public Sprite pot_leekwater;
@@ -18,7 +21,8 @@ public class pot : MonoBehaviour
 
     void Start()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        image = GetComponent<Image>(); // Image로 변경
+        audioSource = gameObject.AddComponent<AudioSource>(); // AudioSource 추가
 
         // 딕셔너리 초기화
         tagToSprite = new Dictionary<string, Sprite>
@@ -41,12 +45,12 @@ public class pot : MonoBehaviour
             Sprite newSprite = tagToSprite[collidedTag];
 
             // 이미지 변경
-            spriteRenderer.sprite = newSprite;
+            image.sprite = newSprite;
 
             // 직접 추가한 오디오 클립을 재생
             if (collisionSound != null)
             {
-                AudioSource.PlayClipAtPoint(collisionSound, transform.position);
+                audioSource.PlayOneShot(collisionSound); // PlayClipAtPoint 대신 PlayOneShot 사용
             }
             else
             {

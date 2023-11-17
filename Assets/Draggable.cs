@@ -28,4 +28,17 @@ public class Draggable : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDra
     {
         canvasGroup.blocksRaycasts = true;
     }
+
+    // 트리거 충돌이 발생했을 때 호출되는 메서드
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        // 충돌한 오브젝트의 태그가 "cooking"이면
+        if (other.CompareTag("cooking"))
+        {
+            // 부모 오브젝트 파괴
+            Destroy(transform.parent.gameObject);  // Destroy the parent object
+            // 현재 오브젝트 파괴
+            Destroy(gameObject);  // Destroy the current object
+        }
+    }
 }
