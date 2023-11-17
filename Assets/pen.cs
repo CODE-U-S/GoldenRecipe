@@ -26,6 +26,7 @@ public class pen : MonoBehaviour
         {
             { "shrimp", pen_shrimp },
             { "leek", pen_leek },
+            { "rice", pen_shrimpfriedrice }
         };
     }
 
@@ -40,7 +41,25 @@ public class pen : MonoBehaviour
             Sprite newSprite = tagToSprite[collidedTag];
 
             // 이미지 변경
-            image.sprite = newSprite;
+            
+            if(collidedTag == "rice" && image.sprite == pen_leekshrimp){
+
+                image.sprite = pen_shrimpfriedrice;
+            }
+            else if (collidedTag == "leek" && image.sprite == pen_shrimp)
+            {
+                // If the blender is in a water state and a carrot collides, change to blender_carrotjuice
+                image.sprite = pen_leekshrimp;
+            }
+            else if(collidedTag == "shrimp" && image.sprite == pen_leek){
+
+                image.sprite = pen_leekshrimp;
+            }
+            else
+            {
+                // Otherwise, change the image to the new sprite
+                image.sprite = newSprite;
+            }
 
             // 직접 추가한 오디오 클립을 재생
             if (collisionSound != null)

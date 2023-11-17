@@ -13,6 +13,9 @@ TagManager:
   - cooking
   - water
   - shrimp
+  - carrot juice
+  - rice
+  - curry
   layers:
   - Default
   - TransparentFX
