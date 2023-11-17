@@ -9,33 +9,46 @@ namespace check.Check
 {
     public class check : MonoBehaviour
     {
-    bool check_ = true;
-    public TextMeshProUGUI OpenandClose;
-    public void checks()
-    {
-        if (check_)
+        private void Start()
         {
-            Open();
-
+            check_ = PlayerPrefs.GetInt("SavedCheck"); // 저장된 데이터 불러오기
+            checks();
         }
-        else
+        int check_ = 1;
+        public TextMeshProUGUI OpenandClose;
+        public void checks()
         {
-            Close();
+            if (check_ == 1)
+            {
+                Open();
+
+            }
+            else
+            {
+                Close();
+            }
+        }
+
+        void Open()
+        {
+            OpenandClose.text = "Open";
+            check_ = 0;
+            SaveData();
+        }
+
+        void Close()
+        {
+            OpenandClose.text = "Close";
+            check_ = 1;
+            SaveData();
+        }
+
+        private void SaveData()
+        {
+            PlayerPrefs.Save(); // 변경된 PlayerPrefs를 저장합니다.
         }
     }
-
-    void Open()
-    {
-        OpenandClose.text = "Open";
-        check_ = false;
-    }
-
-    void Close()
-    {
-        OpenandClose.text = "Close";
-        check_ = true;
-    }
-    }//1. 이미지 오브젝트 배열에 넣기 [클리어]
+//1. 이미지 오브젝트 배열에 넣기 [클리어]
 //2. goods마다 랜덤돌리기(중복 상관x) [클리어]
 //3. 띄우기    [클리어]
 //4. 한번 누르면 이미지 사라지기
