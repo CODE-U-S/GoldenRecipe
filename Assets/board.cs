@@ -12,11 +12,14 @@ public class Board : MonoBehaviour
     public Sprite boardLeek;
 
     private Dictionary<string, Sprite> tagToSprite;
+    private AudioSource audioSource; // AudioSource 추가
+
     public AudioClip collisionSound; // 직접 추가한 오디오 클립
 
     void Start()
     {
         image = GetComponent<Image>();
+        audioSource = gameObject.AddComponent<AudioSource>(); // AudioSource 추가
 
         // 딕셔너리 초기화
         tagToSprite = new Dictionary<string, Sprite>
@@ -44,7 +47,7 @@ public class Board : MonoBehaviour
             // 직접 추가한 오디오 클립을 재생
             if (collisionSound != null)
             {
-                AudioSource.PlayClipAtPoint(collisionSound, transform.position);
+                audioSource.PlayOneShot(collisionSound); // PlayClipAtPoint 대신 PlayOneShot 사용
             }
             else
             {
