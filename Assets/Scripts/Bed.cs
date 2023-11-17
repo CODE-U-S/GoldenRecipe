@@ -5,7 +5,8 @@ using TMPro;
 public class Bed : MonoBehaviour
 {
     int day = 30;
-
+    int money;
+    int golden_recipe;
     [SerializeField]
     TextMeshProUGUI _DaysText;
 
@@ -13,6 +14,10 @@ public class Bed : MonoBehaviour
     {
         LoadSavedData(); // 저장된 데이터 불러오기
         UpdateDaysText(); // 텍스트 업데이트
+        if(day == 0)
+        {
+            EndingScene();
+        }
     }
 
     public void LoadBed()
@@ -32,6 +37,8 @@ public class Bed : MonoBehaviour
     private void LoadSavedData()
     {
         day = PlayerPrefs.GetInt("SavedDay", 30); // 저장된 데이터 불러오기, 기본 값은 30
+        money = PlayerPrefs.GetInt("Money");
+        Debug.Log(money);
     }
 
     private void SaveData()
@@ -42,5 +49,22 @@ public class Bed : MonoBehaviour
     private void UpdateDaysText()
     {
         _DaysText.text = string.Format("D-{0:D1}", day);
+    }
+
+    private void EndingScene()
+    {
+        money = 40000;
+        if(money >= 40000)
+        {
+            SceneManager.LoadScene("Ending1");
+        }
+        else if (golden_recipe >= 1)
+        {
+            SceneManager.LoadScene("Ending2");
+        }
+        else
+        {
+            SceneManager.LoadScene("Ending3");
+        }
     }
 }
