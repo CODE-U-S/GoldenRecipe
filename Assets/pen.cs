@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class pen : MonoBehaviour
 {
-    private SpriteRenderer spriteRenderer;
+    private Image image; // SpriteRenderer 대신 Image로 변경
+    private AudioSource audioSource; // AudioSource 추가
+
     public Sprite pen_leek;
     public Sprite pen_leekshrimp;
     public Sprite pen_shrimp;
@@ -15,15 +18,14 @@ public class pen : MonoBehaviour
 
     void Start()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        
+        image = GetComponent<Image>();
+        audioSource = gameObject.AddComponent<AudioSource>(); // AudioSource 추가
 
         // 딕셔너리 초기화
         tagToSprite = new Dictionary<string, Sprite>
         {
             { "shrimp", pen_shrimp },
             { "leek", pen_leek },
-           
         };
     }
 
@@ -38,12 +40,12 @@ public class pen : MonoBehaviour
             Sprite newSprite = tagToSprite[collidedTag];
 
             // 이미지 변경
-            spriteRenderer.sprite = newSprite;
+            image.sprite = newSprite;
 
             // 직접 추가한 오디오 클립을 재생
             if (collisionSound != null)
             {
-                AudioSource.PlayClipAtPoint(collisionSound, transform.position);
+                audioSource.PlayOneShot(collisionSound, 1f); // PlayClipAtPoint 대신 PlayOneShot 사용
             }
             else
             {

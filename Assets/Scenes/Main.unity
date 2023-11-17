@@ -1689,7 +1689,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 100, y: 94.61336}
   m_EdgeRadius: 0
---- !u!50 &1258853073
+--- !u!50 &1258853077
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -3122,6 +3122,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: 'garlicitem '
       objectReference: {fileID: 0}
+    - target: {fileID: 4975579045054822728, guid: f64d1c1b84bf42c4b83f89bc5cb3b9b4, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 107.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4975579045054822728, guid: f64d1c1b84bf42c4b83f89bc5cb3b9b4, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 82.3232
+      objectReference: {fileID: 0}
+    - target: {fileID: 4975579045054822728, guid: f64d1c1b84bf42c4b83f89bc5cb3b9b4, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.0000047684
+      objectReference: {fileID: 0}
+    - target: {fileID: 4975579045054822728, guid: f64d1c1b84bf42c4b83f89bc5cb3b9b4, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.000024796
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3131,10 +3147,10 @@ PrefabInstance:
       addedObject: {fileID: 1258853068}
     - targetCorrespondingSourceObject: {fileID: 4621326485612779267, guid: f64d1c1b84bf42c4b83f89bc5cb3b9b4, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1258853073}
+      addedObject: {fileID: 1258853072}
     - targetCorrespondingSourceObject: {fileID: 4621326485612779267, guid: f64d1c1b84bf42c4b83f89bc5cb3b9b4, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1258853072}
+      addedObject: {fileID: 1258853077}
   m_SourcePrefab: {fileID: 100100000, guid: f64d1c1b84bf42c4b83f89bc5cb3b9b4, type: 3}
 --- !u!1001 &3576444489028813577
 PrefabInstance:
