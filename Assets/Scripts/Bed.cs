@@ -4,11 +4,13 @@ using TMPro;
 
 public class Bed : MonoBehaviour
 {
+
     int day = 30;
     int money;
     int golden_recipe;
     [SerializeField]
     TextMeshProUGUI _DaysText;
+    
 
     void Start()
     {
