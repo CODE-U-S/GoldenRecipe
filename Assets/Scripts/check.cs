@@ -5,8 +5,10 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class check : MonoBehaviour
+namespace check.Check
 {
+    public class check : MonoBehaviour
+    {
     bool check_ = true;
     public TextMeshProUGUI OpenandClose;
     public void checks()
@@ -33,9 +35,10 @@ public class check : MonoBehaviour
         OpenandClose.text = "Close";
         check_ = true;
     }
-}
-//1. 이미지 오브젝트 배열에 넣기
-//2. goods마다 랜덤돌리기(중복 상관x)
-//3. 띄우기
+    }//1. 이미지 오브젝트 배열에 넣기 [클리어]
+//2. goods마다 랜덤돌리기(중복 상관x) [클리어]
+//3. 띄우기    [클리어]
 //4. 한번 누르면 이미지 사라지기
 //5. 다 판매하면 창 띄우기(모두 판매 -> open에서 close로 바꾸라하세요")
+
+}
