@@ -1,19 +1,51 @@
-using System.Collections;
-using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
+using TMPro;
 
-public class checks : MonoBehaviour
+namespace check.Check
 {
-    // Start is called before the first frame update
-       // 안녕하시요
-    void Start()
+    public class checks : MonoBehaviour
     {
-        
-    }
+        private void Start()
+        {
+            OpenandClose.text = "Close";
+            check_ = PlayerPrefs.GetInt("SavedCheck");
+            check();
+        }
+        int check_ = 1;
+        public TextMeshProUGUI OpenandClose;
+        public void check()
+        {
+            if (check_ == 1)
+            {
+                Open();
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+            }
+            else
+            {
+                Close();
+            }
+        }
+
+        void Open()
+        {
+            OpenandClose.text = "Open";
+            check_ = 0;
+            SaveData();
+        }
+
+        void Close()
+        {
+            OpenandClose.text = "Close";
+            check_ = 1;
+            SaveData();
+        }
+
+        private void SaveData()
+        {
+            PlayerPrefs.Save();
+        }
     }
+    
+
 }
