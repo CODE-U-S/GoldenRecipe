@@ -16,7 +16,7 @@ public class shops : MonoBehaviour
     public Button button_random;
 
     int[] index = new int[6];
-    int[] sale_money = new int[3] { 30, 300, 120 };
+    int[] sale_money = new int[6] { 100, 30, 350, 500, 350, 30 };
     int money = 0;
     int[] sale = new int[6];
     int save_check = 0;
@@ -82,10 +82,6 @@ public class shops : MonoBehaviour
             money += sale[0];
             PlayerPrefs.SetInt("Money", money);     //돈 갱신
             money_bar.text = string.Format("{0}", money);
-            //GOTO : text1, 2 투명
-            //GOTO : image 투명
-            //GOTO : 돈 증가
-            //GOTO : button image -> 판매완료
             Debug.Log(sale[0] + "원");
             close_image[0].SetActive(true);
             close_check[0] = true;
@@ -163,12 +159,8 @@ public class shops : MonoBehaviour
         }
     }
     public void CheckingTheClose(){
-        if(closeing < 6){
             closeing += 1;
             SaveData();
-        } else {
-            
-        }
     }
     private void SaveData()
     {

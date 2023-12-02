@@ -1370,7 +1370,7 @@ GameObject:
   - component: {fileID: 454431857}
   - component: {fileID: 454431856}
   m_Layer: 5
-  m_Name: item5
+  m_Name: ShrimpFriedRice
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1655,7 +1655,7 @@ GameObject:
   - component: {fileID: 471955309}
   - component: {fileID: 471955308}
   m_Layer: 5
-  m_Name: item2
+  m_Name: TomatoJuice
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1679,7 +1679,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -190, y: 215}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 90, y: 90}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &471955308
 MonoBehaviour:
@@ -3389,7 +3389,7 @@ GameObject:
   - component: {fileID: 1322108817}
   - component: {fileID: 1322108816}
   m_Layer: 5
-  m_Name: item3
+  m_Name: TomatoEggFriedRice
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3465,7 +3465,7 @@ GameObject:
   - component: {fileID: 1324364924}
   - component: {fileID: 1324364923}
   m_Layer: 5
-  m_Name: item6
+  m_Name: PotatoSoup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4363,7 +4363,7 @@ GameObject:
   - component: {fileID: 1754389481}
   - component: {fileID: 1754389480}
   m_Layer: 5
-  m_Name: item1
+  m_Name: CarrotJuice
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4784,7 +4784,7 @@ GameObject:
   - component: {fileID: 1806821436}
   - component: {fileID: 1806821435}
   m_Layer: 5
-  m_Name: item4
+  m_Name: Curry
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
