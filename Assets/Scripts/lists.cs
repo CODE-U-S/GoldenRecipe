@@ -1,19 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class lists : MonoBehaviour
 {
-    // Start is called before the first frame update
-       // 안녕하시요
-    void Start()
+    
+    public void MoveLevel1()
     {
-        
+        SceneManager.LoadScene("level1");
     }
 
-    // Update is called once per frame
-    void Update()
+    public void MoveLevel2()
     {
-        
+        SceneManager.LoadScene("level2");
+    }
+
+    public void LoadClose()
+    {
+        SceneManager.LoadScene("close", LoadSceneMode.Additive);
     }
 }

@@ -1077,6 +1077,7 @@ GameObject:
   - component: {fileID: 1639151637}
   - component: {fileID: 1639151641}
   - component: {fileID: 1639151642}
+  - component: {fileID: 1639151643}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1201,6 +1202,25 @@ MonoBehaviour:
   - "\uC544\uC774\uD15C \uCC44\uC18C\uBAA8\uC74C"
   - "\uD558\uB298\uC0C9 \uD6C4\uB77C\uC774\uD32C"
   - "\uC694\uB9AC\uC0AC \uB204\uB8FD\uC774"
+--- !u!114 &1639151643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1639151636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 305aaca5e06a75f4d93875c1288d8ded, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  randomText: {fileID: 467326278}
+  randomTextOptions:
+  - "\"\uB204\uB8FD\uC774\uD45C \uB2F9\uADFC\uC8FC\uC2A4\""
+  - "\"\uAC1C\uBC1C\uC790 \uB808\uC2DC\uD53C\""
+  - "\"\uC544\uC774\uD15C \uCC44\uC18C\uBAA8\uC74C\""
+  - "\"\uD558\uB298\uC0C9 \uD6C4\uB77C\uC774\uD32C\""
+  - "\"\uC694\uB9AC\uC0AC \uB204\uB8FD\uC774\""
 --- !u!1 &1651262306
 GameObject:
   m_ObjectHideFlags: 0
