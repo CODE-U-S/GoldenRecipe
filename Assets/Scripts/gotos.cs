@@ -1,19 +1,44 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class gotos : MonoBehaviour
 {
     // Start is called before the first frame update
-       // 안녕하시요
-    void Start()
+    public void MoveMain()
     {
-        
+        SceneManager.LoadScene("Main");
+        Debug.Log("Main으로 전환");
     }
 
-    // Update is called once per frame
-    void Update()
+    public void MoveStore()
     {
-        
+        SceneManager.LoadScene("Store");
+        Debug.Log("Store으로 전환");
+    }
+
+    public void MoveShop()
+    {
+        SceneManager.LoadScene("Shop");
+    }
+
+    public void MoveHome()
+    {
+        SceneManager.LoadScene("Home");
+    }
+
+    public void MoveBag()
+    {
+        SceneManager.LoadScene("Bag");
+    }
+
+    public void MoveList()
+    {
+        SceneManager.LoadScene("List");
+    }
+    public void MoveSetting()
+    {
+        SceneManager.LoadScene("Setting");
     }
 }
