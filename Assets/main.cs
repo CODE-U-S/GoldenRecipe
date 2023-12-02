@@ -3,11 +3,32 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
+public enum ItemType
+{
+    Water,
+    Garlic,
+    Potato,
+    Rice,
+    Carrot,
+    CurryPowder
+}
+
 public class Main : MonoBehaviour
 {
     public GameObject leftBtn;
     public GameObject rightBtn;
     public AudioClip buttonClickSound; // 추가: 버튼 클릭 사운드
+
+    // 재료 프리팹
+    public GameObject waterPrefab;
+    public GameObject garlicPrefab;
+    public GameObject potatoPrefab;
+    public GameObject ricePrefab;
+    public GameObject carrotPrefab;
+    public GameObject curryPowderPrefab;
+
+    public Transform content;
 
     private string[] scenes = { "Poot", "Blender", "Pan", "board" }; // "board" 씬이 첫 번째여야 합니다.
 
@@ -23,6 +44,30 @@ public class Main : MonoBehaviour
         // "board" 씬의 인덱스를 찾아 시작 씬으로 설정합니다.
         currentSceneIndex = System.Array.IndexOf(scenes, "board");
         LoadSceneByIndex(currentSceneIndex);
+
+        if (content == null)
+        {
+            Debug.LogError("Content is not set in the inspector!");
+            return;
+        }
+
+        InstantiateItemPrefabs(ItemType.Water, waterPrefab);
+        InstantiateItemPrefabs(ItemType.Garlic, garlicPrefab);
+        InstantiateItemPrefabs(ItemType.Potato, potatoPrefab);
+        InstantiateItemPrefabs(ItemType.Rice, ricePrefab);
+        InstantiateItemPrefabs(ItemType.Carrot, carrotPrefab);
+        InstantiateItemPrefabs(ItemType.CurryPowder, curryPowderPrefab);
+    }
+
+    private void InstantiateItemPrefabs(ItemType itemType, GameObject prefab)
+    {
+        int itemCount = DataManager.Instance.GetItemCount(itemType);
+
+        for (int i = 0; i < itemCount; i++)
+        {
+            GameObject itemInstance = Instantiate(prefab, content);
+            // 여기에서 필요한 초기화 코드를 추가하세요.
+        }
     }
 
     public void RightBtn()
