@@ -205,8 +205,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1805745350}
-        m_TargetAssemblyTypeName: GOTO, Assembly-CSharp
+      - m_Target: {fileID: 1805745349}
+        m_TargetAssemblyTypeName: gotos, Assembly-CSharp
         m_MethodName: MoveHome
         m_Mode: 1
         m_Arguments:
@@ -338,8 +338,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1805745349}
-        m_TargetAssemblyTypeName: List, Assembly-CSharp
+      - m_Target: {fileID: 1805745350}
+        m_TargetAssemblyTypeName: lists, Assembly-CSharp
         m_MethodName: LoadClose
         m_Mode: 1
         m_Arguments:
@@ -756,8 +756,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1805745349}
-        m_TargetAssemblyTypeName: List, Assembly-CSharp
+      - m_Target: {fileID: 1805745350}
+        m_TargetAssemblyTypeName: lists, Assembly-CSharp
         m_MethodName: LoadClose
         m_Mode: 1
         m_Arguments:
@@ -1350,8 +1350,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1805745349}
-        m_TargetAssemblyTypeName: List, Assembly-CSharp
+      - m_Target: {fileID: 1805745350}
+        m_TargetAssemblyTypeName: lists, Assembly-CSharp
         m_MethodName: LoadClose
         m_Mode: 1
         m_Arguments:
@@ -1988,8 +1988,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1805745349}
-        m_TargetAssemblyTypeName: List, Assembly-CSharp
+      - m_Target: {fileID: 1805745350}
+        m_TargetAssemblyTypeName: lists, Assembly-CSharp
         m_MethodName: LoadClose
         m_Mode: 1
         m_Arguments:
@@ -2464,8 +2464,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1805745349}
-        m_TargetAssemblyTypeName: List, Assembly-CSharp
+      - m_Target: {fileID: 1805745350}
+        m_TargetAssemblyTypeName: lists, Assembly-CSharp
         m_MethodName: MoveLevel2
         m_Mode: 1
         m_Arguments:
@@ -2597,8 +2597,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1805745349}
-        m_TargetAssemblyTypeName: List, Assembly-CSharp
+      - m_Target: {fileID: 1805745350}
+        m_TargetAssemblyTypeName: lists, Assembly-CSharp
         m_MethodName: MoveLevel1
         m_Mode: 1
         m_Arguments:
@@ -2830,7 +2830,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1805745344}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 81fdf7896bdf6744a821697387b30f3f, type: 3}
+  m_Script: {fileID: 11500000, guid: a2786af8c0e89704cba5d98d3bf07695, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1805745350
@@ -2842,7 +2842,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1805745344}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c8b8dd6389886744ba758e38bc1b5f98, type: 3}
+  m_Script: {fileID: 11500000, guid: fa9bbe73ffb860647beb1eebd71c07e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1805745351
@@ -2857,7 +2857,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc791c9692c905e4983b13cb1b7df36e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  close: 
 --- !u!1 &1825982847
 GameObject:
   m_ObjectHideFlags: 0
@@ -2941,8 +2940,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1805745349}
-        m_TargetAssemblyTypeName: List, Assembly-CSharp
+      - m_Target: {fileID: 1805745350}
+        m_TargetAssemblyTypeName: lists, Assembly-CSharp
         m_MethodName: LoadClose
         m_Mode: 1
         m_Arguments:

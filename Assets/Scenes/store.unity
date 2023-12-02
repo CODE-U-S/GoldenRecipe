@@ -1298,13 +1298,6 @@ MonoBehaviour:
   carrotText: {fileID: 1857349369}
   curryPowderText: {fileID: 184351680}
   coinSound: {fileID: 8300000, guid: 2df0e339e5408ba40b47e68d721df004, type: 3}
-  waterPrefab: {fileID: 298634139708520303, guid: 9f849772484316c42b4f51c632011917, type: 3}
-  garlicPrefab: {fileID: 1155202412349960530, guid: f64d1c1b84bf42c4b83f89bc5cb3b9b4, type: 3}
-  potatoPrefab: {fileID: 2741296550621436816, guid: d5a129f35ffdc3c45b4ab34565e7d921, type: 3}
-  ricePrefab: {fileID: 612602868442068601, guid: bc0afb81980f91644b5be5305636020c, type: 3}
-  carrotPrefab: {fileID: 8256328866394207613, guid: f15c7736efbc0c543b8eab0c517a680f, type: 3}
-  curryPowderPrefab: {fileID: 612602868442068601, guid: 3de1ff97259c7ba4ca9e9f21542b0c91, type: 3}
-  content: {fileID: 998658150}
 --- !u!114 &998658157
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1314,7 +1307,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 998658150}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c8b8dd6389886744ba758e38bc1b5f98, type: 3}
+  m_Script: {fileID: 11500000, guid: a2786af8c0e89704cba5d98d3bf07695, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1209484501
@@ -1420,13 +1413,6 @@ MonoBehaviour:
   carrotText: {fileID: 0}
   curryPowderText: {fileID: 0}
   coinSound: {fileID: 0}
-  waterPrefab: {fileID: 0}
-  garlicPrefab: {fileID: 0}
-  potatoPrefab: {fileID: 0}
-  ricePrefab: {fileID: 0}
-  carrotPrefab: {fileID: 0}
-  curryPowderPrefab: {fileID: 0}
-  content: {fileID: 0}
 --- !u!1 &1224028672
 GameObject:
   m_ObjectHideFlags: 0
