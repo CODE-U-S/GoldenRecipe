@@ -5417,8 +5417,8 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1940430033}
-        m_TargetAssemblyTypeName: check.Check.checks, Assembly-CSharp
-        m_MethodName: check
+        m_TargetAssemblyTypeName: check.Check.Check, Assembly-CSharp
+        m_MethodName: checks
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5594,6 +5594,7 @@ MonoBehaviour:
   - {fileID: 1476671964}
   - {fileID: 1079009424}
   money_bar: {fileID: 1859113993}
+  randomButtonText: {fileID: 1608276980}
   food_image:
   - {fileID: 636656684}
   - {fileID: 1573846669}
