@@ -16,10 +16,10 @@ public class Bed : MonoBehaviour
     {
         LoadSavedData(); // 저장된 데이터 불러오기
         UpdateDaysText(); // 텍스트 업데이트
-        //if(day == 0)
-        //{
-        //    EndingScene();
-        //}
+        if(day == 0)
+        {
+           EndingScene();
+        }
     }
 
     public void LoadBed()
@@ -30,7 +30,8 @@ public class Bed : MonoBehaviour
     public void BedYes()
     {
         day -= 1;
-        //초기화용 day = 30;
+        //초기화용
+        //day = 30;
         PlayerPrefs.SetInt("SavedDay", day);
         Debug.Log("프린트 완");
         SaveData(); // 데이터 저장
