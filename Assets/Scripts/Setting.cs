@@ -38,8 +38,8 @@ public class settingss : MonoBehaviour
     }
     public void LoadReset()
     {
-        SceneManager.LoadScene("reset", LoadSceneMode.Additive);
-        Debug.Log("reset");
+        SceneManager.LoadScene("resets", LoadSceneMode.Additive);
+        Debug.Log("resets");
     }
     public void LoadTiket()
     {
@@ -59,14 +59,7 @@ public class settingss : MonoBehaviour
         SceneManager.LoadScene("Setting", LoadSceneMode.Additive);
         Invoke("sleep", 3);
     }
-
     public void sleep(){
         SceneManager.LoadScene("Setting");
-    }
-    
-    public void LoadSetting_reset(){
-        Toast.Show("초기화 되었습니다.", 2f, new Color(8f, 0.7f, 0.0f));
-        SceneManager.LoadScene("Setting", LoadSceneMode.Additive);
-        Invoke("sleep", 3);
     }
 }

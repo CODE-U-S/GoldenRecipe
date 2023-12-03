@@ -206,8 +206,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1639151644}
-        m_TargetAssemblyTypeName: settingss, Assembly-CSharp
-        m_MethodName: LoadSetting
+        m_TargetAssemblyTypeName: DataManager, Assembly-CSharp
+        m_MethodName: LoadSetting_reset
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1211,7 +1211,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1639151636}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6fa9701e6ca24fe428294e67f7eef09d, type: 3}
+  m_Script: {fileID: 11500000, guid: b1aece5f9c4db004eb3857fe58d83c56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1651262306
@@ -1429,5 +1429,5 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 501593308}
-  - {fileID: 1639151640}
   - {fileID: 409706445}
+  - {fileID: 1639151640}
