@@ -10,15 +10,18 @@ public class Bed : MonoBehaviour
     int golden_recipe;
     [SerializeField]
     TextMeshProUGUI _DaysText;
+    [SerializeField]
+    TextMeshProUGUI _MoneyText;  // 돈을 표시할 TextMeshProUGUI 필드
     
 
     void Start()
     {
         LoadSavedData(); // 저장된 데이터 불러오기
         UpdateDaysText(); // 텍스트 업데이트
+        UpdateMoneyText();         // 돈 텍스트 업데이트
         if(day == 0)
         {
-           EndingScene();
+            EndingScene();
         }
     }
 
@@ -30,8 +33,6 @@ public class Bed : MonoBehaviour
     public void BedYes()
     {
         day -= 1;
-        //초기화용
-        //day = 30;
         PlayerPrefs.SetInt("SavedDay", day);
         Debug.Log("프린트 완");
         SaveData(); // 데이터 저장
@@ -54,6 +55,16 @@ public class Bed : MonoBehaviour
     private void UpdateDaysText()
     {
         _DaysText.text = string.Format("D-{0:D1}", day);
+    }
+
+    private void UpdateMoneyText()
+    {
+        // DataManager 인스턴스가 존재하는지 확인
+        if (DataManager.Instance != null)
+        {
+            money = DataManager.Instance.Money;  // DataManager에서 돈 값 가져오기
+            _MoneyText.text = string.Format("{0}", money);  // 돈 텍스트 업데이트
+        }
     }
 
     private void EndingScene()
