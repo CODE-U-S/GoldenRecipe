@@ -4,7 +4,7 @@ using UnityEngine.UI;
 using UnityEngine;
 using TMPro;
 
-public class shops : MonoBehaviour
+public class Shop : MonoBehaviour
 {
     public Sprite[] sprites;
     public TextMeshProUGUI[] text_money;

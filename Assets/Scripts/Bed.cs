@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
 
-public class beds : MonoBehaviour
+public class Bed : MonoBehaviour
 {
 
     int day = 30;

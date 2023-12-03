@@ -4,17 +4,17 @@ using TMPro;
 
 namespace check.Check
 {
-    public class checks : MonoBehaviour
+    public class Check : MonoBehaviour
     {
         private void Start()
         {
             OpenandClose.text = "Close";
             check_ = PlayerPrefs.GetInt("SavedCheck");
-            check();
+            checks();
         }
         int check_ = 1;
         public TextMeshProUGUI OpenandClose;
-        public void check()
+        public void checks()
         {
             if (check_ == 1)
             {

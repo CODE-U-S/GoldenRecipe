@@ -298,8 +298,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 808948539}
-        m_TargetAssemblyTypeName: Setting, Assembly-CSharp
-        m_MethodName: LoadSetting
+        m_TargetAssemblyTypeName: settingss, Assembly-CSharp
+        m_MethodName: LoadSetting_tiket
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -550,7 +550,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 808948538}
-        m_TargetAssemblyTypeName: GOTO, Assembly-CSharp
+        m_TargetAssemblyTypeName: Goto, Assembly-CSharp
         m_MethodName: MoveSetting
         m_Mode: 1
         m_Arguments:
@@ -715,7 +715,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 808948533}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c8b8dd6389886744ba758e38bc1b5f98, type: 3}
+  m_Script: {fileID: 11500000, guid: a2786af8c0e89704cba5d98d3bf07695, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &808948539
@@ -727,7 +727,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 808948533}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6775036f1cdc4142b3be895cc453aa1, type: 3}
+  m_Script: {fileID: 11500000, guid: 6fa9701e6ca24fe428294e67f7eef09d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1249183750
