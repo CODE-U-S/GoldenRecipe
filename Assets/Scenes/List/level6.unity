@@ -136,6 +136,7 @@ GameObject:
   - component: {fileID: 238149294}
   - component: {fileID: 238149293}
   - component: {fileID: 238149297}
+  - component: {fileID: 238149298}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -241,6 +242,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2786af8c0e89704cba5d98d3bf07695, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &238149298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 238149292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1520c3c15edcbf42b91717147b77248, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  money_meseeage: {fileID: 0}
 --- !u!1 &347748204
 GameObject:
   m_ObjectHideFlags: 0
@@ -536,9 +550,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 238149297}
-        m_TargetAssemblyTypeName: GOTO, Assembly-CSharp
-        m_MethodName: MoveList
+      - m_Target: {fileID: 238149298}
+        m_TargetAssemblyTypeName: list_close, Assembly-CSharp
+        m_MethodName: LoadLevel6Yes
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

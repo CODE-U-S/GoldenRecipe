@@ -205,9 +205,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1639151644}
-        m_TargetAssemblyTypeName: DataManager, Assembly-CSharp
-        m_MethodName: LoadSetting_reset
+      - m_Target: {fileID: 1639151645}
+        m_TargetAssemblyTypeName: settingss, Assembly-CSharp
+        m_MethodName: LoadReset
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1078,6 +1078,7 @@ GameObject:
   - component: {fileID: 1639151641}
   - component: {fileID: 1639151643}
   - component: {fileID: 1639151644}
+  - component: {fileID: 1639151645}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1212,6 +1213,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b1aece5f9c4db004eb3857fe58d83c56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1639151645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1639151636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fa9701e6ca24fe428294e67f7eef09d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1651262306
