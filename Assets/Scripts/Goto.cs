@@ -27,6 +27,14 @@ public class Goto : MonoBehaviour
     {
         SceneManager.LoadScene("Home");
     }
+    public void MoveHome_daycount()
+    {
+         // "Home" 씬으로 이동
+        SceneManager.LoadScene("Home");
+
+        // BedYes 메서드 호출
+        FindObjectOfType<Bed>().BedYes();
+    }
 
     public void MoveBag()
     {
