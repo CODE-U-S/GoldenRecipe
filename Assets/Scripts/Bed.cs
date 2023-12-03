@@ -4,72 +4,86 @@ using TMPro;
 
 public class Bed : MonoBehaviour
 {
-
-    int day = 30;
+    int day;
     int money;
-    int golden_recipe;
+
+    // UI Text 필드 추가
     [SerializeField]
-    TextMeshProUGUI _DaysText;
-    
+    private TextMeshProUGUI _MoneyText;
+
+    [SerializeField]
+    private TextMeshProUGUI _DayText;
 
     void Start()
     {
-        LoadSavedData(); // 저장된 데이터 불러오기
-        UpdateDaysText(); // 텍스트 업데이트
-        if(day == 0)
+        // 돈 텍스트 업데이트
+        UpdateMoneyText();
+        UpdateDayText();
+
+        // 날짜가 0이면 엔딩 씬 호출
+        if (day == 0)
         {
-           EndingScene();
+            EndingScene();
         }
     }
 
     public void LoadBed()
     {
+        // "Bed" 씬을 추가 모드로 로드합니다.
         SceneManager.LoadScene("Bed", LoadSceneMode.Additive);
     }
 
     public void BedYes()
     {
-        day -= 1;
-        //초기화용
-        //day = 30;
-        PlayerPrefs.SetInt("SavedDay", day);
-        Debug.Log("프린트 완");
-        SaveData(); // 데이터 저장
-        SceneManager.LoadScene("Home");
+        // DayCount를 호출하여 날짜 값을 감소시킵니다.
+        DataManager.Instance.DayCount();
+
+        // DayCount 호출 후 날짜 텍스트를 업데이트합니다.
+        UpdateDayText();
     }
 
-    private void LoadSavedData()
+    private void UpdateMoneyText()
     {
-        day = PlayerPrefs.GetInt("SavedDay", 30);
-        // 저장된 데이터 불러오기, 기본 값은 30
-        money = PlayerPrefs.GetInt("Money");
-        Debug.Log(money);
+        // DataManager 인스턴스가 존재하는지 확인
+        if (DataManager.Instance != null)
+        {
+            // DataManager에서 돈 값 가져오기
+            money = DataManager.Instance.Money;
+            // 돈 텍스트 업데이트
+            _MoneyText.text = string.Format("{0}", money);
+        }
     }
 
-    private void SaveData()
+    private void UpdateDayText()
     {
-        PlayerPrefs.Save();// 변경된 PlayerPrefs를 저장합니다.
-    }
-
-    private void UpdateDaysText()
-    {
-        _DaysText.text = string.Format("D-{0:D1}", day);
+        // DataManager 인스턴스가 존재하는지 확인
+        if (DataManager.Instance != null)
+        {
+            // DataManager에서 날짜 값 가져오기
+            day = DataManager.Instance.Day;
+            if(day==0){
+                EndingScene();
+            }
+            // 날짜 텍스트 업데이트
+            _DayText.text = string.Format("{0}", day);
+        }
     }
 
     private void EndingScene()
     {
-        money = 40000;
-        if(money >= 40000)
+        // day가 0이 되었을 때
+        if (day == 0)
         {
-            SceneManager.LoadScene("Ending1");
-        }
-        else if (golden_recipe >= 1)
-        {
-            SceneManager.LoadScene("Ending2");
-        }
-        else
-        {
-            SceneManager.LoadScene("Ending3");
+            // 현재 money가 3000 이상이면 Ending1로 이동
+            if (money >= 3000)
+            {
+                SceneManager.LoadScene("Ending1");
+            }
+            // 현재 money가 3000 미만이면 Ending3로 이동
+            else
+            {
+                SceneManager.LoadScene("Ending3");
+            }
         }
     }
 }

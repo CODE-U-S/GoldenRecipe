@@ -23,6 +23,7 @@ public class DataManager : MonoBehaviour
         }
     }
 
+    private int day = 30;
     private int money = 100;
     private int waterCount = 0;
     private int garlicCount = 0;
@@ -30,6 +31,21 @@ public class DataManager : MonoBehaviour
     private int riceCount = 0;
     private int carrotCount = 0;
     private int curryPowderCount = 0;
+
+    public int Day
+    {
+        get { return day; }
+        set { day = value; }
+    }
+
+    public void DayCount()
+    {
+        day--;
+        if (day < 0)
+        {
+            day = 0;
+        }
+    }
 
     public int Money
     {
@@ -118,9 +134,7 @@ public class DataManager : MonoBehaviour
         riceCount = 0;
         carrotCount = 0;
         curryPowderCount = 0;
-        LoadSetting_reset();
-        UpdateMoneyBar();
-        UpdateItemCount();
+        
     }
     public void sleep(){
         SceneManager.LoadScene("Setting");
