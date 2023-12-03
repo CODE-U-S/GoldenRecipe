@@ -1,5 +1,6 @@
 using UnityEngine;
-
+using EasyUI.Toast;
+using UnityEngine.SceneManagement;
 public class DataManager : MonoBehaviour
 {
     private static DataManager instance;
@@ -117,9 +118,18 @@ public class DataManager : MonoBehaviour
         riceCount = 0;
         carrotCount = 0;
         curryPowderCount = 0;
-
+        LoadSetting_reset();
         UpdateMoneyBar();
         UpdateItemCount();
+    }
+    public void sleep(){
+        SceneManager.LoadScene("Setting");
+    }
+    
+    public void LoadSetting_reset(){
+        Toast.Show("초기화 되었습니다.", 2f, new Color(8f, 0.7f, 0.0f));
+        SceneManager.LoadScene("Setting", LoadSceneMode.Additive);
+        Invoke("sleep", 3);
     }
 
     private void UpdateMoneyBar()
