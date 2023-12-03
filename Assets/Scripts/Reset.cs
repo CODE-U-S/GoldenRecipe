@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using EasyUI.Toast;
 
-public class resets : MonoBehaviour
+public class Reset : MonoBehaviour
 {
     public TextMeshProUGUI randomText;
     // Unity Inspector에서 텍스트 UI 요소를 연결

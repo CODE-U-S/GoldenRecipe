@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Setting : MonoBehaviour
+public class settingss : MonoBehaviour
 {
     float sec;
     int day;
@@ -14,19 +14,19 @@ public class Setting : MonoBehaviour
     {
         if(tiket)
         {
-            Toast.Show("ÄíÆù Àû¿ëÀÌ ¿Ï·áµÇ¾ú½À´Ï´Ù.", 2f, new Color(8f, 0.7f, 0.0f));
+            Toast.Show("ì¿ í° ì ìš©ì´ ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤.", 2f, new Color(8f, 0.7f, 0.0f));
             tiket = false;
         }
-        // PlayerPrefs¸¦ ÀÌ¿ëÇØ ÀúÀåµÈ µ¥ÀÌÅÍ¸¦ ºÒ·¯¿É´Ï´Ù.
-        day = PlayerPrefs.GetInt("SavedDay", 1); // ±âº» °ªÀº 1
+        // PlayerPrefsë¥¼ ì´ìš©í•´ ì €ì¥ëœ ë°ì´í„°ë¥¼ ë¶ˆëŸ¬ì˜µë‹ˆë‹¤.
+        day = PlayerPrefs.GetInt("SavedDay", 1); //ê¸°ë³¸ê°’ì€ 1
     }
-    public void DiscordURL()     //¸µÅ©
+    public void DiscordURL()     //ë§í¬
     {
         Application.OpenURL("https://discord.gg/pXzaGUrhMR");
         Debug.Log("dicord");
     }
 
-    public void GithubURL()    //¸µÅ©
+    public void GithubURL()    //ë§í¬
     {
         Application.OpenURL("https://github.com/CODE-U-S/GoldenRecipe");
         Debug.Log("github");
@@ -47,16 +47,26 @@ public class Setting : MonoBehaviour
         Debug.Log("tiket");
     }
 
-    public void LoadSetting()
+    public void LoadSetting_tiket()
     {
         tiket = true;
         if (tiket)
         {
-            Toast.Show("ÄíÆù Àû¿ëÀÌ ¿Ï·áµÇ¾ú½À´Ï´Ù.", 2f, new Color(8f, 0.7f, 0.0f));
+            Toast.Show("ì¿ í° ì ìš©ì´ ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤.", 2f, new Color(8f, 0.7f, 0.0f));
             tiket = false;
         }
-        Debug.Log("ÄíÆùÀû¿ë¿Ï");
+        Debug.Log("ì¿ í°ì ìš©ì™„");
         SceneManager.LoadScene("Setting", LoadSceneMode.Additive);
+        Invoke("sleep", 3);
+    }
+
+    public void sleep(){
+        SceneManager.LoadScene("Setting");
     }
     
+    public void LoadSetting_reset(){
+        Toast.Show("ì´ˆê¸°í™” ë˜ì—ˆìŠµë‹ˆë‹¤.", 2f, new Color(8f, 0.7f, 0.0f));
+        SceneManager.LoadScene("Setting", LoadSceneMode.Additive);
+        Invoke("sleep", 3);
+    }
 }

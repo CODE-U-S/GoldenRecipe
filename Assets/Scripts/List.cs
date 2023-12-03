@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-public class lists : MonoBehaviour
+public class List : MonoBehaviour
 {
     
     public void MoveLevel1()
