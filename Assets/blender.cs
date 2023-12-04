@@ -13,6 +13,7 @@ public class blender : MonoBehaviour
     public Sprite blender_carrotjuice;
     public Sprite blender_water;
     public Sprite blender_watercarrot;
+    public Sprite Init;
 
     private Dictionary<string, Sprite> tagToSprite;
     public AudioClip collisionSound; // 직접 추가한 오디오 클립
@@ -27,7 +28,8 @@ public class blender : MonoBehaviour
         tagToSprite = new Dictionary<string, Sprite>
         {
             { "carrot", blender_carrot },
-            { "water", blender_water }
+            { "water", blender_water },
+            { "init", Init }
         };
     }
 
@@ -86,5 +88,14 @@ public class blender : MonoBehaviour
                 Debug.LogWarning("blender 사운드 없음");
             }
         }
+    }
+    public void OnClick()
+    {
+        if (image.sprite == blender_carrotjuice)
+        {
+            DataManager.Instance.IncreaseFoodItemCount(FoodItemType.CarrotJuice);
+        }
+
+        image.sprite = Init;
     }
 }

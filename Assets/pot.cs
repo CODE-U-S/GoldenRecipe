@@ -15,6 +15,7 @@ public class pot : MonoBehaviour
     public Sprite pot_water;
     public Sprite pot_watercarrot;
     public Sprite pot_waterpotato;
+    public Sprite Init;
 
     private Dictionary<string, Sprite> tagToSprite;
     public AudioClip collisionSound; // 직접 추가한 오디오 클립
@@ -31,7 +32,8 @@ public class pot : MonoBehaviour
             { "carrot", pot_watercarrot },
             { "leek", pot_leekwater },
             { "potato", pot_waterpotato },
-            { "curry", pot_curry }
+            { "curry", pot_curry },
+            { "init", Init }
         };
     }
 
@@ -77,5 +79,9 @@ public class pot : MonoBehaviour
                 Debug.LogWarning("pot 사운드 없음");
             }
         }
+    }
+    public void OnClick()
+    {
+        image.sprite = Init;
     }
 }
