@@ -1,6 +1,17 @@
 using UnityEngine;
 using EasyUI.Toast;
 using UnityEngine.SceneManagement;
+
+public enum FoodItemType
+{
+    CarrotJuice,
+    TomatoJuice,
+    TomatoEggStirFry,
+    ShrimpFriedRice,
+    Curry,
+    PotatoSoup
+}
+
 public class DataManager : MonoBehaviour
 {
     private static DataManager instance;
@@ -57,7 +68,7 @@ public class DataManager : MonoBehaviour
                 return shrimpFriedRiceCount;
             case FoodItemType.Curry:
                 return curryCount;
-            case FoodItemType.potatoSoupCount:
+            case FoodItemType.PotatoSoup:
                 return potatoSoupCount;
             default:
                 return 0;
@@ -84,11 +95,11 @@ public class DataManager : MonoBehaviour
             case FoodItemType.Curry:
                 curryCount++;
                 break;
-            case FoodItemType.potatoSoupCount:
+            case FoodItemType.PotatoSoup:
                 potatoSoupCount++;
                 break;
         }
-
+    }
 
 
 
