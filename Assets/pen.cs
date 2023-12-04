@@ -12,6 +12,7 @@ public class pen : MonoBehaviour
     public Sprite pen_leekshrimp;
     public Sprite pen_shrimp;
     public Sprite pen_shrimpfriedrice;
+    public Sprite Init;
 
     private Dictionary<string, Sprite> tagToSprite;
     public AudioClip collisionSound; // 직접 추가한 오디오 클립
@@ -26,7 +27,8 @@ public class pen : MonoBehaviour
         {
             { "shrimp", pen_shrimp },
             { "leek", pen_leek },
-            { "rice", pen_shrimpfriedrice }
+            { "rice", pen_shrimpfriedrice },
+            { "init", Init }
         };
     }
 
@@ -71,5 +73,9 @@ public class pen : MonoBehaviour
                 Debug.LogWarning("pen 사운드 없음");
             }
         }
+    }
+    public void OnClick()
+    {
+        image.sprite = Init;
     }
 }

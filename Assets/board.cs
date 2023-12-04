@@ -10,49 +10,61 @@ public class Board : MonoBehaviour
     public Sprite boardGarlic;
     public Sprite boardPotato;
     public Sprite boardLeek;
+    public Sprite Init;
 
     private Dictionary<string, Sprite> tagToSprite;
-    private AudioSource audioSource; // AudioSource 추가
+    private AudioSource audioSource;
 
-    public AudioClip collisionSound; // 직접 추가한 오디오 클립
+    public AudioClip collisionSound;
 
     void Start()
     {
         image = GetComponent<Image>();
-        audioSource = gameObject.AddComponent<AudioSource>(); // AudioSource 추가
+        audioSource = gameObject.AddComponent<AudioSource>();
 
-        // 딕셔너리 초기화
         tagToSprite = new Dictionary<string, Sprite>
         {
             { "carrot", boardCarrot },
             { "garlic", boardGarlic },
             { "potato", boardPotato },
-            { "leek", boardLeek }
+            { "leek", boardLeek },
+            { "init", Init }
         };
+
+        // GameObject에 Button 컴포넌트가 있는지 확인
+        var button = GetComponent<Button>();
+        if (button != null)
+        {
+            button.onClick.AddListener(OnClick);
+        }
+        else
+        {
+            Debug.LogWarning("이 GameObject에는 Button 컴포넌트가 없습니다.");
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        // 충돌한 오브젝트의 태그를 가져오기
         string collidedTag = collision.tag;
 
-        // 딕셔너리에서 태그에 해당하는 이미지 가져오기
         if (tagToSprite.ContainsKey(collidedTag))
         {
             Sprite newSprite = tagToSprite[collidedTag];
-
-            // 이미지 변경
             image.sprite = newSprite;
 
-            // 직접 추가한 오디오 클립을 재생
             if (collisionSound != null)
             {
-                audioSource.PlayOneShot(collisionSound); // PlayClipAtPoint 대신 PlayOneShot 사용
+                audioSource.PlayOneShot(collisionSound);
             }
             else
             {
                 Debug.LogWarning("Board 사운드 없음");
             }
         }
+    }
+
+    public void OnClick()
+    {
+        image.sprite = Init;
     }
 }

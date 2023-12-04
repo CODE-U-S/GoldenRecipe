@@ -31,6 +31,66 @@ public class DataManager : MonoBehaviour
     private int riceCount = 0;
     private int carrotCount = 0;
     private int curryPowderCount = 0;
+    
+
+
+    // 각 음식 아이템의 수를 카운트하는 변수들
+    private int carrotJuiceCount = 0;
+    private int tomatoJuiceCount = 0;
+    private int tomatoEggStirFryCount = 0;
+    private int shrimpFriedRiceCount = 0;
+    private int curryCount = 0;
+    private int potatoSoupCount = 0;
+
+    // 각 음식 아이템의 수를 반환하는 메서드 추가
+    public int GetFoodItemCount(FoodItemType foodItemType)
+    {
+        switch (foodItemType)
+        {
+            case FoodItemType.CarrotJuice:
+                return carrotJuiceCount;
+            case FoodItemType.TomatoJuice:
+                return tomatoJuiceCount;
+            case FoodItemType.TomatoEggStirFry:
+                return tomatoEggStirFryCount;
+            case FoodItemType.ShrimpFriedRice:
+                return shrimpFriedRiceCount;
+            case FoodItemType.Curry:
+                return curryCount;
+            case FoodItemType.potatoSoupCount:
+                return potatoSoupCount;
+            default:
+                return 0;
+        }
+    }
+
+    // 각 음식 아이템의 수를 증가시키는 메서드 추가
+    public void IncreaseFoodItemCount(FoodItemType foodItemType)
+    {
+        switch (foodItemType)
+        {
+            case FoodItemType.CarrotJuice:
+                carrotJuiceCount++;
+                break;
+            case FoodItemType.TomatoJuice:
+                tomatoJuiceCount++;
+                break;
+            case FoodItemType.TomatoEggStirFry:
+                tomatoEggStirFryCount++;
+                break;
+            case FoodItemType.ShrimpFriedRice:
+                shrimpFriedRiceCount++;
+                break;
+            case FoodItemType.Curry:
+                curryCount++;
+                break;
+            case FoodItemType.potatoSoupCount:
+                potatoSoupCount++;
+                break;
+        }
+
+
+
 
     public int Day
     {

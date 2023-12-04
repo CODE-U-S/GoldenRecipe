@@ -22,6 +22,14 @@ public class Shop : MonoBehaviour
     int save_check = 0;
     bool[] close_check = new bool[6];
     int closeing = 0;
+
+    public TextMeshProUGUI text_carrotJuiceCount;
+    public TextMeshProUGUI text_tomatoJuiceCount;
+    public TextMeshProUGUI text_tomatoEggStirFryCount;
+    public TextMeshProUGUI text_shrimpFriedRiceCount;
+    public TextMeshProUGUI text_curryCount;
+    public TextMeshProUGUI text_potatoSoupCount;
+    
     private void Start()
     {
         money = PlayerPrefs.GetInt("Money");
