@@ -21,7 +21,7 @@ public class Store_money : MonoBehaviour
     }
 
     // 돈 표시 업데이트
-        private void UpdateMoneyBar()
+    private void UpdateMoneyBar()
     {
         moneyBarText.text = DataManager.Instance.Money.ToString();
     }
