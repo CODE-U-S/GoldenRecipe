@@ -23,17 +23,17 @@ public class Store_money : MonoBehaviour
     // 돈 표시 업데이트
         private void UpdateMoneyBar()
     {
-        moneyBarText.text = "Money: " + DataManager.Instance.Money;
+        moneyBarText.text = DataManager.Instance.Money.ToString();
     }
 
     private void UpdateItemCount()
     {
-        waterText.text = "Water: " + DataManager.Instance.WaterCount;
-        garlicText.text = "Garlic: " + DataManager.Instance.GarlicCount;
-        potatoText.text = "Potato: " + DataManager.Instance.PotatoCount;
-        riceText.text = "Rice: " + DataManager.Instance.RiceCount;
-        carrotText.text = "Carrot: " + DataManager.Instance.CarrotCount;
-        curryPowderText.text = "Curry Powder: " + DataManager.Instance.CurryPowderCount;
+        waterText.text = DataManager.Instance.WaterCount.ToString();
+        garlicText.text = DataManager.Instance.GarlicCount.ToString();
+        potatoText.text = DataManager.Instance.PotatoCount.ToString();
+        riceText.text =  DataManager.Instance.RiceCount.ToString();
+        carrotText.text = DataManager.Instance.CarrotCount.ToString();
+        curryPowderText.text = DataManager.Instance.CurryPowderCount.ToString();
     }
 
     private void SaveGameData()

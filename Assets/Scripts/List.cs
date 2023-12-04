@@ -22,9 +22,6 @@ public class List : MonoBehaviour
         opens[1] = PlayerPrefs.GetInt("open1");
         opens[2] = PlayerPrefs.GetInt("open2");
         opens[3] = PlayerPrefs.GetInt("open3");
-
-        
-        
     }
     public void OpenImage(){
         Debug.Log("30"+opens[0]);
@@ -43,6 +40,7 @@ public class List : MonoBehaviour
         if(list_check[0] == 1){
             opens[0] = 1;
             Debug.Log("45" + opens[0]);
+            OpenImage();
             LoadClose();
             SceneManager.LoadScene("level2");
         } else {
