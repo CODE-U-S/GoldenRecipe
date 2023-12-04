@@ -5646,6 +5646,12 @@ MonoBehaviour:
   - {fileID: 176116835}
   - {fileID: 1873335344}
   button_random: {fileID: 1922718657}
+  text_carrotJuiceCount: {fileID: 1246754375}
+  text_tomatoJuiceCount: {fileID: 158423133}
+  text_tomatoEggStirFryCount: {fileID: 1633234840}
+  text_shrimpFriedRiceCount: {fileID: 1602946590}
+  text_curryCount: {fileID: 606946107}
+  text_potatoSoupCount: {fileID: 80181351}
 --- !u!114 &1940430033
 MonoBehaviour:
   m_ObjectHideFlags: 0

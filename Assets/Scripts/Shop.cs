@@ -29,7 +29,7 @@ public class Shop : MonoBehaviour
     public TextMeshProUGUI text_shrimpFriedRiceCount;
     public TextMeshProUGUI text_curryCount;
     public TextMeshProUGUI text_potatoSoupCount;
-    
+
     private void Start()
     {
         money = PlayerPrefs.GetInt("Money");
@@ -44,6 +44,16 @@ public class Shop : MonoBehaviour
                 PrintImage();   //저장된 데이터 프린트하기
             }
         }
+        UpdateItemCounts(); // 아이템 수 업데이트
+    }
+    private void UpdateItemCounts()
+    {
+        text_carrotJuiceCount.text = DataManager.Instance.GetFoodItemCount(FoodItemType.CarrotJuice).ToString();
+        text_tomatoJuiceCount.text = DataManager.Instance.GetFoodItemCount(FoodItemType.TomatoJuice).ToString();
+        text_tomatoEggStirFryCount.text = DataManager.Instance.GetFoodItemCount(FoodItemType.TomatoEggStirFry).ToString();
+        text_shrimpFriedRiceCount.text = DataManager.Instance.GetFoodItemCount(FoodItemType.ShrimpFriedRice).ToString();
+        text_curryCount.text = DataManager.Instance.GetFoodItemCount(FoodItemType.Curry).ToString();
+        text_potatoSoupCount.text = DataManager.Instance.GetFoodItemCount(FoodItemType.PotatoSoup).ToString();
     }
     public void Init_UI()
     {
@@ -71,6 +81,7 @@ public class Shop : MonoBehaviour
         }
         save_check = 1;
         SaveData();
+        UpdateItemCounts(); // 랜덤 이미지를 갱신했을 때 아이템 수 업데이트
     }
     private void PrintImage()
     {
