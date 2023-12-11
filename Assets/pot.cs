@@ -82,6 +82,10 @@ public class pot : MonoBehaviour
     }
     public void OnClick()
     {
+        if (image.sprite == pot_curry)
+        {
+            DataManager.Instance.IncreaseFoodItemCount(FoodItemType.Curry);
+        }
         image.sprite = Init;
     }
 }

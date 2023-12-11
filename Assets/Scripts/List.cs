@@ -69,7 +69,7 @@ public class List : MonoBehaviour
     public void LoadClose()
     {
         //초기화용
-        //reset_list();
+       // reset_list();
         PlayerPrefs.SetInt("recipe", recipe_money);
         PlayerPrefs.Save();
         SceneManager.LoadScene("close", LoadSceneMode.Additive);

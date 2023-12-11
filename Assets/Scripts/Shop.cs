@@ -32,7 +32,7 @@ public class Shop : MonoBehaviour
 
     private void Start()
     {
-        money = PlayerPrefs.GetInt("Money");
+        money = DataManager.Instance.Money;
         money_bar.text = string.Format("{0}", money);
         save_check = PlayerPrefs.GetInt("SavedSave_check");
         if (save_check == 1)
@@ -59,7 +59,7 @@ public class Shop : MonoBehaviour
     {
         button_random.onClick.AddListener(Funciton_RandomImage);
     }
-    private void Funciton_RandomImage()
+    public void Funciton_RandomImage()
     {
         for (int i = 0; i < 6; i++)
         {
@@ -94,6 +94,10 @@ public class Shop : MonoBehaviour
     }
     public void SaleButton1()
     {
+        DataManager.Instance.Money += 380;
+        
+        text_shrimpFriedRiceCount.text = "0";
+
         if (close_check[0])
         {
             Debug.Log("제대로 작동됨.");
@@ -105,7 +109,6 @@ public class Shop : MonoBehaviour
             PlayerPrefs.SetInt("Money", money); // 돈 갱신
             money_bar.text = money.ToString(); // UI에 표시
             Debug.Log(sale[0] + "원");
-            Debug.Log(money);
             close_image[0].SetActive(true);
             close_check[0] = true;
             CheckingTheClose();
@@ -120,12 +123,12 @@ public class Shop : MonoBehaviour
         }
         else
         {
+            text_curryCount.text = "0";
             money += sale_money[index[1]]; // sale_money[0]로 수정
             sale[1] += sale_money[index[1]]; // sale[0]도 갱신
             PlayerPrefs.SetInt("Money", money); // 돈 갱신
             money_bar.text = money.ToString(); // UI에 표시
             Debug.Log(sale[1] + "원");
-            Debug.Log(money);
             close_image[1].SetActive(true);
             close_check[1] = true;
             CheckingTheClose();
@@ -144,7 +147,6 @@ public class Shop : MonoBehaviour
             PlayerPrefs.SetInt("Money", money); // 돈 갱신
             money_bar.text = money.ToString(); // UI에 표시
             Debug.Log(sale[2] + "원");
-            Debug.Log(money);
             close_image[2].SetActive(true);
             close_check[2] = true;
             CheckingTheClose();
@@ -163,7 +165,6 @@ public class Shop : MonoBehaviour
             PlayerPrefs.SetInt("Money", money); // 돈 갱신
             money_bar.text = money.ToString(); // UI에 표시
             Debug.Log(sale[3] + "원");
-            Debug.Log(money);
             close_image[3].SetActive(true);
             close_check[3] = true;
             CheckingTheClose();
@@ -182,7 +183,6 @@ public class Shop : MonoBehaviour
             PlayerPrefs.SetInt("Money", money); // 돈 갱신
             money_bar.text = money.ToString(); // UI에 표시
             Debug.Log(sale[4] + "원");
-            Debug.Log(money);
             close_image[4].SetActive(true);
             close_check[4] = true;
             CheckingTheClose();
@@ -200,8 +200,6 @@ public class Shop : MonoBehaviour
             sale[5] += sale_money[index[5]]; // sale[0]도 갱신
             PlayerPrefs.SetInt("Money", money); // 돈 갱신
             money_bar.text = money.ToString(); // UI에 표시
-            Debug.Log(sale[5] + "원");
-            Debug.Log(money);
             close_image[5].SetActive(true);
             close_check[5] = true;
             CheckingTheClose();
