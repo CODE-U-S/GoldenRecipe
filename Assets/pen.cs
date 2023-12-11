@@ -76,6 +76,10 @@ public class pen : MonoBehaviour
     }
     public void OnClick()
     {
+        if (image.sprite == pen_shrimpfriedrice)
+        {
+            DataManager.Instance.IncreaseFoodItemCount(FoodItemType.ShrimpFriedRice);
+        }
         image.sprite = Init;
     }
 }

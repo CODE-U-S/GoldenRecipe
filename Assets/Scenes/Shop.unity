@@ -3194,7 +3194,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1940430027}
-        m_TargetAssemblyTypeName: GOTO, Assembly-CSharp
+        m_TargetAssemblyTypeName: Goto, Assembly-CSharp
         m_MethodName: MoveHome
         m_Mode: 1
         m_Arguments:
@@ -3929,7 +3929,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Close
+  m_text: Open
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 819115b1aabd18a49a457d4b47042ec6, type: 2}
   m_sharedMaterial: {fileID: 1520611664795056752, guid: 819115b1aabd18a49a457d4b47042ec6, type: 2}
@@ -5445,19 +5445,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1940430032}
-        m_TargetAssemblyTypeName: Shop, Assembly-CSharp
-        m_MethodName: Init_UI
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1940430033}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: check.Check.Check, Assembly-CSharp
         m_MethodName: checks
         m_Mode: 1
@@ -5482,7 +5470,6 @@ GameObject:
   - component: {fileID: 1940430029}
   - component: {fileID: 1940430028}
   - component: {fileID: 1940430027}
-  - component: {fileID: 1940430033}
   - component: {fileID: 1940430032}
   m_Layer: 5
   m_Name: Canvas
@@ -5652,19 +5639,6 @@ MonoBehaviour:
   text_shrimpFriedRiceCount: {fileID: 1602946590}
   text_curryCount: {fileID: 606946107}
   text_potatoSoupCount: {fileID: 80181351}
---- !u!114 &1940430033
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1940430026}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 095e0f15651f4544dbb321d708f8dd3a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OpenandClose: {fileID: 1608276980}
 --- !u!1 &2063763308
 GameObject:
   m_ObjectHideFlags: 0
