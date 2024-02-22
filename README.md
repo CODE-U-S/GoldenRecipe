@@ -35,3 +35,10 @@
 
 ### 개인 레시피
 플레이어는 자신만의 레시피를 만들 수 있습니다. 이를 통해 게임을 진행하면서 고유한 요리 조합을 개발하고 저장할 수 있습니다.
+
+## 🖥️ 플레이 영상
+
+https://github.com/iris-starry/GoldenRecipe/assets/106311884/e5bf9765-4ced-4f8a-969b-1cca0ba7c2c9
+
+
+
